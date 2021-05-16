@@ -1,14 +1,15 @@
-import React from 'react'
+import React, {useState} from 'react'
 import BulletinBoard from '../components/BulletinBoard'
-import Menu from '../components/Menu'
-import Navbar from '../components/Navbar'
+import Footer from '../components/Footer'
+import Header from '../components/Header'
 
 function Home() {
+    const [display, setDisplay] = useState(null)
     return (
         <>
-            <Navbar/>
+            <Header/>
             <BulletinBoard/>
-            <Menu/>
+            <Footer setDisplay={setDisplay} display={display}/>
         </>
     )
 }

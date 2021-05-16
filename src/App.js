@@ -1,5 +1,6 @@
 import React, { Suspense, lazy, useState, useEffect } from "react";
 import { HashRouter as Router, Route, Switch } from "react-router-dom";
+import 'react-slideshow-image/dist/styles.css'
 import "./styles.css";
 import Loader from "./components/Loader";
 const Home = lazy(() => import("./pages/Home"));
