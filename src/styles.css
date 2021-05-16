@@ -55,3 +55,16 @@ a {
   bottom: 0% !important;
   -webkit-transition:1.75s;
 }
+
+.transition-container-top {
+  top: 8.75% !important;
+  -webkit-transition: 1.75s;
+}
+.transition-container-bottom {
+  top: 100% !important;
+  -webkit-transition: 1.75s;
+}
+
+.transition-container-hide {
+  display: none !important
+}
