@@ -65,7 +65,7 @@ function Footer({ display, setDisplay, styles }) {
         {
         // eslint-disable-next-line
         }<a
-          onClick={() => transition("Map")}
+          onClick={() => transition("Menu")}
           style={button_style}
         >
           <i className="material-icons medium">restaurant_menu</i>

@@ -1,6 +1,7 @@
 import React, { useState, useEffect } from "react";
 import BulletinBoard from "../components/BulletinBoard";
 import Contact from "../components/Contact/index";
+import Location from "../components/Location/index";
 import Footer from "../components/Footer";
 import Header from "../components/Header";
 import Slider from "../components/Slider";
@@ -25,6 +26,7 @@ function Home() {
         display={display}
       >
           {display === "Contact" &&  <Contact styles={styles}/>}
+          {display === "Map" &&  <Location styles={styles}/>}
       </Slider>
     </>
   );
