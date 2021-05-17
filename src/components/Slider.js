@@ -2,7 +2,7 @@ import React from "react";
 
 function Slider({ display, children }) {
   const contact_style = {
-    height: "90vh",
+    height: "91vh",
     position: "absolute",
     zIndex: 100,
     left: 0,

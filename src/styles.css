@@ -1,5 +1,8 @@
 @import url('https://fonts.googleapis.com/css2?family=Roboto+Slab:wght@600&display=swap');
 
+body, html {
+  max-height: 100px !important
+}
 * {
   font-family: 'Roboto Slab', serif;
 }
@@ -57,14 +60,34 @@ a {
 }
 
 .transition-container-top {
-  top: 8.75% !important;
+  top: 9% !important;
   -webkit-transition: 1.75s;
 }
 .transition-container-bottom {
   top: 100% !important;
   -webkit-transition: 1.75s;
+  height: 0 !important
 }
 
 .transition-container-hide {
   display: none !important
+}
+
+.add_green i{
+  transition: 2s ease;
+  color: #00C853 !important
+}
+.add_red i{
+  transition: 2s ease;
+  color: red !important
+}
+.add_yellow i{
+  transition: 2s ease;
+  color: yellow !important
+}
+
+/* Menu */
+
+.card.horizontal .card-image {
+  min-width: 100% !important;
 }

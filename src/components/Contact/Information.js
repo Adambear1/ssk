@@ -1,5 +1,6 @@
 import React from "react";
 import Card from "../Card"
+import LinksTag from "../LinksTag"
 function Information({ social_media }) {
   const icon_style = {
     display: "flex",
@@ -7,7 +8,7 @@ function Information({ social_media }) {
   };
   return (
     <>
-  <Card name="Contact" color="red">
+  <Card name="Contact" color="red" accent={true}>
           <div class="card-stacked">
             <div class="card-content container">
               <p>
@@ -17,17 +18,17 @@ function Information({ social_media }) {
               </p>
               <br />
               <p>
-              🏆😋🥩🔥   We value all our loyal customers! To be one, join our <a href="http://bit.ly/sevensons" target="_blank" rel="noreferrer" style={{color: "blue"}}>VIP Mailing list</a> ,
+              🏆😋🥩🔥   We value all our loyal customers! To be one, join our <LinksTag link={"http://bit.ly/sevensons"} msg={"VIP Mailing list"}/>,
                 were they are first to hear all special promotions, future events, and much more!
               </p>
               <br/>
               <p>
-              When we are not making our award winning dishes, or giving back to our community, we stay diligent in keeping our food modern, natural, and gourmet. We love to hear our feedback and suggestions! Feel free to let us know what you think, and we will talk all feedback and constructive criticism to heart! Feel free to <a href="mailto:SevenSonsKitchen@gmail.com?subject='We Love Seven Sons!'"target="_blank" rel="noreferrer" style={{color: "blue"}}>EMAIL</a> us! 💪❤️🤗
+              When we are not making our award winning dishes, or giving back to our community, we stay diligent in keeping our food modern, natural, and gourmet. We love to hear our feedback and suggestions! Feel free to let us know what you think, and we will talk all feedback and constructive criticism to heart! Feel free to <LinksTag link={"mailto:SevenSonsKitchen@gmail.com?subject='We Love Seven Sons!'"} msg={"EMAIL"}/> us! 💪❤️🤗
               </p>
               <br/>
               <br/>
               <p class="center">
-              For all pre-orders, please make payment to our <a href="https://lnkd.in/gzBxRUz" target="_blank" rel="noreferrer" style={{color: "blue"}}>Cash App</a>! 💪❤️🤗
+              For all pre-orders, please make payment to our <LinksTag link={"https://lnkd.in/gzBxRUz"} msg={"Cash App"}/>! 💪❤️🤗
               </p>
               <br/>
             </div>

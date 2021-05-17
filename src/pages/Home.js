@@ -5,6 +5,7 @@ import Location from "../components/Location/index";
 import Footer from "../components/Footer";
 import Header from "../components/Header";
 import Slider from "../components/Slider";
+import Menu from "../components/Menu";
 
 function Home() {
   const [display, setDisplay] = useState(null);
@@ -25,7 +26,8 @@ function Home() {
       <Slider
         display={display}
       >
-          {display === "Contact" &&  <Contact styles={styles}/>}
+          {display === "Menu" && <Menu styles={styles}/>}
+          {display === "Contact" && <Contact styles={styles}/>}
           {display === "Map" &&  <Location styles={styles}/>}
       </Slider>
     </>
