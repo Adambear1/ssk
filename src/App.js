@@ -6,7 +6,7 @@ import Loader from "./components/Loader";
 const Home = lazy(() => import("./pages/Home"));
 
 function App() {
-  const time = 100
+  const time = 2200
   const [loading, setLoading] = useState(true);
   useEffect(() => {
     setTimeout(()=> setLoading(false), time)
