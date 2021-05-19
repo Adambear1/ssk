@@ -4,6 +4,7 @@ import links from "../../assets/links.png";
 import ribs from "../../assets/ribs_1.png";
 import wings from "../../assets/slide_1.jpg";
 import wings_1 from "../../assets/slide_2.jpg";
+import { menu } from "../../utils/css";
 import Item from "./Item";
 import Pagination from "./Pagination";
 function Container() {
@@ -118,31 +119,7 @@ function Container() {
       desc: "Slow smoked half chicken. Marinated in our secret mix + smoked for 48 hours. Nice and tender, cooked to perfection.",
     },
   ];
-  const row_style = {
-    marginBottom: "90px",
-  };
-  const container_style = {
-    marginTop: "10px",
-    marginBottom: "0px",
-  };
-
-  const img_style = {
-    maxHeight: "50%",
-    maxWidth: "100%",
-    margin: "0",
-    padding: "0",
-    width: "100%",
-    height: "200px",
-    borderRadius: "5px",
-    objectFit: "cover",
-    objectPosition: "100% 100%",
-    cursor: "pointer",
-  };
-  const cover_style = {
-    zIndex: 1000,
-    backgroundColor: "rgba (255,255,255,.1)",
-    maxWidth: "100%",
-  };
+ 
   const [currentPage, setCurrentPage] = React.useState(1);
   const [postsPerPage] = React.useState(8);
 
@@ -164,17 +141,17 @@ function Container() {
           setShow={setShow}
         />
       )}
-      <div class="row" style={row_style}>
+      <div class="row" style={menu.row_style}>
         {currentPosts.map(({ src, name, desc, cat, all_photos, type, gf }) => (
           <div
             class="col s3"
-            style={container_style}
+            style={menu.container_style}
             onClick={() =>
               setShow({ src, name, desc, cat, all_photos, type, gf })
             }
           >
-            <div className="waves-effect waves-light" style={cover_style}>
-              <img src={src} style={img_style} />
+            <div className="waves-effect waves-light" style={menu.cover_style}>
+              <img src={src} style={menu.img_style} />
             </div>
           </div>
         ))}

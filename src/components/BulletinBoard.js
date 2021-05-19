@@ -1,29 +1,15 @@
 import React, { useState } from "react";
 import logo from "../assets/logo.png";
+import { bulletinBoard } from "../utils/css";
 import SlideShow from "./SlideShow";
 function BulletinBoard() {
-    const main = {
-        zIndex: 10,
-        position: "absolute",
-        display: "flex",
-        justifyContent: "center",
-        cursor: "pointer",
-        transition: ".3s ease"
-    }
-  const regular = {
-    width: "80%",
-    height: "100%",
-    marginLeft: "10%"
-  };
-  const small = {
-      width: "77%",
-      height: "97%",
-      marginLeft: "11.5%"
-  }
+  console.log("width: ", window.screen.width)
+  console.log("height: ", window.screen.height)
+
 
   const [logoStyle, setLogoStyle] = useState({
-    ...main,
-    ...regular
+    ...bulletinBoard.logo_main,
+    ...bulletinBoard.logo_regular,
   });
   return (
     <div
@@ -33,12 +19,9 @@ function BulletinBoard() {
       <SlideShow
         children={
           <img
-            onMouseDown={
-              ()=>setLogoStyle({ ...main, ...small})
-            }
-            onMouseUp={
-              ()=>setLogoStyle({ ...main, ...regular})
-            }
+            className="logo"
+            onMouseDown={() => setLogoStyle({ ...bulletinBoard.logo_main, ...bulletinBoard.logo_small })}
+            onMouseUp={() => setLogoStyle({ ...bulletinBoard.logo_main, ...bulletinBoard.logo_regular })}
             src={logo}
             style={logoStyle}
             alt="Company Logo"

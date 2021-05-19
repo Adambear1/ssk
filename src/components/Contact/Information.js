@@ -1,11 +1,8 @@
 import React from "react";
+import { contact } from "../../utils/css";
 import Card from "../Card"
 import LinksTag from "../LinksTag"
 function Information({ social_media }) {
-  const icon_style = {
-    display: "flex",
-    justifyContent: "center",
-  };
   return (
     <>
   <Card name="Contact" color="red" accent={true}>
@@ -32,7 +29,7 @@ function Information({ social_media }) {
               </p>
               <br/>
             </div>
-            <div class="card-action align" style={icon_style}>
+            <div class="card-action align" style={contact.icon_style}>
               {social_media.map(({ button }) => (
                 <td dangerouslySetInnerHTML={{ __html: button }} />
               ))}

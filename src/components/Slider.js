@@ -1,19 +1,12 @@
 import React from "react";
+import { slider } from "../utils/css";
 
 function Slider({ display, children }) {
-  const contact_style = {
-    height: "91vh",
-    position: "absolute",
-    zIndex: 100,
-    left: 0,
-    width: "100%",
-    opacity: "100%",
-  };
   return (
     <>
       {
         <div
-          style={contact_style}
+          style={slider.slider_style}
           className={`${
             display
               ? "transition-container-top grey lighten-2"

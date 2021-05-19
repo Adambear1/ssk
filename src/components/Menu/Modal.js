@@ -1,33 +1,11 @@
 import React from "react";
+import { menu } from "../../utils/css";
 
 function Modal({ setShow, children }) {
-  const modal_style = {
-    position: "fixed",
-    zIndex: 10000,
-    left: 0,
-    top: 0,
-    width: "100%",
-    height: "auto",
-    overflow: "auto",
-    backgroundColor: "rgba(0,0,0,0.2)",
-  };
-  const content_style = {
-    backgroundColor: "#fefefe",
-    margin: "8.25% auto",
-    padding: "20px",
-    border: "1px solid #888",
-    width: "37%",
-  };
-  const close_style = {
-    color: "#aaa",
-    float: "right",
-    fontSize: "28px",
-    fontWeight: "bold"
-  }
   return (
-    <div id="backdrop" style={modal_style} onClick={({target})=> target.id && target.id === "backdrop" && setShow(null)}>
-      <div style={content_style}>
-        <span class="waves-effect waves-light" style={close_style} onClick={()=>setShow(null)}>&times;</span>
+    <div id="backdrop" style={menu.modal_style} onClick={({target})=> target.id && target.id === "backdrop" && setShow(null)}>
+      <div style={menu.content_style}>
+        <span class="waves-effect waves-light" style={menu.close_style} onClick={()=>setShow(null)}>&times;</span>
         {children}
       </div>
     </div>
