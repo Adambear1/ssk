@@ -1,42 +1,26 @@
 import React from "react";
 import Modal from "./Modal";
+import Slider from "./Slider";
 
-function Item({ name, src, desc, setShow }) {
-  const img_style = {
-    width: "450px",
-    height: "auto",
-    maxHeight: "500px",
-    backgroundPosition: "center",
-    backgroundSize: "cover",
+function Item({ name, src, desc, setShow, all_photos, cat, type, gf }) {
+  const footer_style = {
+    top: "-25px",
   };
-  const span_style = {
-    backgroundColor: "rgba(0,0,0,.6)",
-    height: "auto",
-    width: "auto",
-    borderTopRightRadius: "12px",
+  const h5_style = {
+    margin: "0",
   };
-  const card_style = {
-    maxWidth: "450px",
-    marginLeft: "auto",
-    marginRight: "auto",
-    width: "auto",
-    height: "auto"
-  }
   return (
     <Modal setShow={setShow}>
-      <div class="card" style={card_style}>
-        <div class="card-image">
-          <img src={src} style={img_style} />
-          <span class="card-title" style={span_style}>
-            {name}
-          </span>
-          <a class="btn-floating halfway-fab waves-effect waves-light red">
-            <i class="material-icons">add</i>
-          </a>
-        </div>
-        <div class="card-content">
-          <p>{desc}</p>
-        </div>
+      <Slider images={[src, ...all_photos]} name={name} />
+      <div style={footer_style}></div>
+      <div class="card-action">
+        <h5 style={h5_style} className="center">
+          {name}
+        </h5>
+        <p className="center">{desc}</p>
+      </div>
+      <div class="card-action center">
+        {/* {cat}{"   "}{type}{"   "}{gf}{"   "} */}
       </div>
     </Modal>
   );
