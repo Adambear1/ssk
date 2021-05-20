@@ -8,13 +8,13 @@ function Item({ name, src, desc, setShow, all_photos, cat, type, gf }) {
     <Modal setShow={setShow}>
       <Slider images={[src, ...all_photos]} name={name} />
       <div style={menu.footer_style}></div>
-      <div class="card-action">
+      <div className="card-action">
         <h5 style={menu.h5_style} className="center">
           {name}
         </h5>
         <p className="center">{desc}</p>
       </div>
-      <div class="card-action center">
+      <div className="card-action center">
         {/* {cat}{"   "}{type}{"   "}{gf}{"   "} */}
       </div>
     </Modal>

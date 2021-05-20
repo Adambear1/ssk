@@ -121,14 +121,14 @@ function Container() {
   ];
  
   const [currentPage, setCurrentPage] = React.useState(1);
-  const [postsPerPage] = React.useState(8);
-
+  const [postsPerPage] = React.useState(window.screen.width > 1024 ? 8 : 4);
+console.log(window.screen)
   const indexOfLastPost = currentPage * postsPerPage;
   const indexOfFirstPost = indexOfLastPost - postsPerPage;
   const currentPosts = items.slice(indexOfFirstPost, indexOfLastPost);
   const paginate = (pageNumber) => setCurrentPage(pageNumber);
   return (
-    <div class="container">
+    <div className="container">
       {show && (
         <Item
           name={show.name}
@@ -141,10 +141,10 @@ function Container() {
           setShow={setShow}
         />
       )}
-      <div class="row" style={menu.row_style}>
+      <div className="row" style={menu.row_style}>
         {currentPosts.map(({ src, name, desc, cat, all_photos, type, gf }) => (
           <div
-            class="col s3"
+            className="col s3"
             style={menu.container_style}
             onClick={() =>
               setShow({ src, name, desc, cat, all_photos, type, gf })

@@ -6,8 +6,8 @@ function Information({ social_media }) {
   return (
     <>
   <Card name="Contact" color="red" accent={true}>
-          <div class="card-stacked">
-            <div class="card-content container">
+          <div className="card-stacked">
+            <div className="card-content container">
               <p>
                 Follow our social media to stay to date with latest events, menu
                 changes, and news! Our Direct Messages are open 24/7 and we read and respond
@@ -24,12 +24,12 @@ function Information({ social_media }) {
               </p>
               <br/>
               <br/>
-              <p class="center">
+              <p className="center">
               For all pre-orders, please make payment to our <LinksTag link={"https://lnkd.in/gzBxRUz"} msg={"Cash App"}/>! 💪❤️🤗
               </p>
               <br/>
             </div>
-            <div class="card-action align" style={contact.icon_style}>
+            <div className="card-action align social-media-container" style={contact.icon_style}>
               {social_media.map(({ button }) => (
                 <td dangerouslySetInnerHTML={{ __html: button }} />
               ))}

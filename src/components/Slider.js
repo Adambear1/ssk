@@ -7,7 +7,7 @@ function Slider({ display, children }) {
       {
         <div
           style={slider.slider_style}
-          className={`${
+          className={`"animate__animated animate__fadeIn" ${
             display
               ? "transition-container-top grey lighten-2"
               : "transition-container-bottom grey lighten-2"
