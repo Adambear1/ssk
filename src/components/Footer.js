@@ -46,7 +46,7 @@ function Footer({ display, setDisplay, styles }) {
   return (
     <>
       <ul
-        className={`center orange accent-3  animate__animated animate__fadeIn ${
+        className={`center orange accent-3 footer-nav animate__animated animate__fadeIn ${
           !display ? "transition-footer-bottom" : "transition-footer-top"
         }`}
         style={footer.footer_ul_style}

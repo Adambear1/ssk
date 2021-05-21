@@ -1,4 +1,4 @@
-export const load_timer = 2200
+export const load_timer = 1
 
 export const footer_timer_bottom = 1250
 

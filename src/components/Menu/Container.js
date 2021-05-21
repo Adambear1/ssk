@@ -121,14 +121,14 @@ function Container() {
   ];
  
   const [currentPage, setCurrentPage] = React.useState(1);
-  const [postsPerPage] = React.useState(window.screen.width > 1024 ? 8 : 4);
+  const [postsPerPage] = React.useState(window.screen.width > 1024 ? 8 : window.screen.width > 500 ? 3 : 2);
 console.log(window.screen)
   const indexOfLastPost = currentPage * postsPerPage;
   const indexOfFirstPost = indexOfLastPost - postsPerPage;
   const currentPosts = items.slice(indexOfFirstPost, indexOfLastPost);
   const paginate = (pageNumber) => setCurrentPage(pageNumber);
   return (
-    <div className="container">
+    <div className="container menu-container">
       {show && (
         <Item
           name={show.name}

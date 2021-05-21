@@ -7,7 +7,7 @@ function Item({ name, src, desc, setShow, all_photos, cat, type, gf }) {
   return (
     <Modal setShow={setShow}>
       <Slider images={[src, ...all_photos]} name={name} />
-      <div style={menu.footer_style}></div>
+      <div style={menu.footer_style} className="menu-container-item"></div>
       <div className="card-action">
         <h5 style={menu.h5_style} className="center">
           {name}
