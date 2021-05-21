@@ -13,7 +13,7 @@ function BulletinBoard() {
   });
   return (
     <div
-      className="grey lighten-2 center animate__animated animate__fadeIn"
+      className="grey lighten-2 center animate__animated animate__fadeIn main-container"
       style={{ width: "100%", height: "80vh" }}
     >
       <SlideShow

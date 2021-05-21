@@ -9,7 +9,6 @@ import Menu from "../components/Menu";
 
 function Home() {
   const [display, setDisplay] = useState(null);
-  const [view, setView] = useState("");
   const styles = {
         height: "90vh",
         position: "absolute",
@@ -19,7 +18,7 @@ function Home() {
         opacity: "100%",
   }
   return (
-    <>
+    <div className="main">
       <Header />
       <BulletinBoard />
       <Footer setDisplay={setDisplay} display={display} />
@@ -30,7 +29,7 @@ function Home() {
           {display === "Contact" && <Contact styles={styles}/>}
           {display === "Map" &&  <Location styles={styles}/>}
       </Slider>
-    </>
+    </div>
   );
 }
 

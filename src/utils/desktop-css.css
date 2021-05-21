@@ -1,0 +1,37 @@
+@media only screen and (max-width: 1200px) {
+  .social-media-container {
+    flex-wrap: wrap;
+    align-items: center;
+    justify-content: center;
+  }
+  .social-media-btn {
+    flex: 2 3 20%;
+  }
+}
+
+@media only screen and (max-width: 999px) {
+  .logo {
+    width: 105% !important;
+    margin-left: 0% !important;
+  }
+}
+
+@media only screen and (max-width: 725px) {
+  .logo {
+    width: 115% !important;
+    margin-left: -5% !important;
+  }
+}
+
+@media only screen and (max-width: 575px) {
+  .logo {
+    width: 150% !important;
+    margin-left: -22.5% !important;
+  }
+}
+
+@media only screen and (max-width: 900px) {
+  .menu-modal {
+    width: 60% !important;
+  }
+}
