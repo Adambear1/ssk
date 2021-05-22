@@ -140,4 +140,9 @@
     margin-left: auto !important;
     margin-right: auto !important;
   }
+
+  .menu-modal-carousel {
+    display: none !important
+  }
+
 }

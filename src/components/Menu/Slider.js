@@ -13,7 +13,7 @@ function Slider({ images, name }) {
   }, []);
 
   return (
-      <div className="carousel" style={menu.slider_container_style}>
+      <div className="carousel menu-modal-carousel" style={menu.slider_container_style}>
         {images &&
           images.map((src) => (
               <a className="carousel-item" style={menu.slider_a_style}>
