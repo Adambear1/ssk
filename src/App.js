@@ -3,10 +3,12 @@ import { HashRouter as Router, Route, Switch } from "react-router-dom";
 import "react-slideshow-image/dist/styles.css";
 import Loader from "./components/Loader";
 import { load_timer } from "./utils/timers";
-import "./utils/iphoneX-css.css"
 import "./utils/desktop-css.css"
+import "./utils/iphoneX-css.css"
+import "./utils/ipad-css.css"
 import "./utils/general-css.css"
 import "./utils/transition-css.css"
+
 
 
 const Home = lazy(() => import("./pages/Home"));

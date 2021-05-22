@@ -14,7 +14,7 @@ function Item({ name, src, desc, setShow, all_photos, cat, type, gf }) {
         </h5>
         <p className="center">{desc}</p>
       </div>
-      <div className="card-action center">
+      <div className="card-action center menu-card-footer">
         {/* {cat}{"   "}{type}{"   "}{gf}{"   "} */}
       </div>
     </Modal>

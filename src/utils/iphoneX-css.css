@@ -117,15 +117,7 @@
     font-size: 20px !important;
   }
 
-  .menu-modal-card {
-    width: 100% !important;
-    display: flex;
-    flex-direction: column !important;
-    height: auto !important;
-  }
-  .menu-modal-card p {
-    display: none !important;
-  }
+
   .carousel {
     bottom: 0px !important;
   }
@@ -134,12 +126,44 @@
     height: 100% !important;
   }
 
-  .menu-modal {
-    width: 100% !important;
-    height: auto !important;
-    margin-left: auto !important;
-    margin-right: auto !important;
+  .menu-container-item, .menu-card-footer{
+    display: none !important
   }
+
+  .menu-modal {
+    width: 73% !important;
+    height: auto !important;
+    margin: 14px !important;
+    margin-top: 125px !important;
+    padding-left: auto !important;
+    padding-right: auto !important;
+    /* padding: 0px !important; */
+    /* margin-left: auto !important;
+    margin-right: auto !important; */
+  }
+
+  .menu-modal-header{
+    padding-top: 15px !important
+  }
+
+  .modal-close-btn {
+    margin-left: -10px;
+    padding-right: 10px;
+    height: 30px !important;
+    top: -25px !important
+  }
+
+  .menu-modal-card {
+    width: 120% !important;
+    /* display: flex; */
+    /* flex-direction: column !important; */
+    height: auto !important;
+    padding: 0px !important
+  }
+  .menu-modal-card p {
+    /* display: none !important; */
+  }
+
 
   .menu-modal-carousel {
     display: none !important
