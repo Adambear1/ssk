@@ -1,6 +1,3 @@
-const dynamic_attribute = (input, height, width) => {
-    
-}
 export const contact = {
   icon_style: {
     display: "flex",
@@ -10,6 +7,9 @@ export const contact = {
 export const header = {
     header_text_style : {
         fontSize: "auto"
+    },
+    main_header : {
+      // height: "10%"
     }
 }
 export const menu = {
@@ -35,6 +35,7 @@ export const menu = {
     zIndex: 1000,
     backgroundColor: "rgba (255,255,255,.1)",
     maxWidth: "100%",
+    height: "100%"
   },
   footer_style: {
     top: "-25px",
@@ -48,7 +49,7 @@ export const menu = {
     left: 0,
     top: 0,
     width: "100%",
-    height: "auto",
+    height: "100%",
     overflow: "auto",
     backgroundColor: "rgba(0,0,0,0.2)",
   },
@@ -168,7 +169,7 @@ export const bulletinBoard = {
 export const footer = {
   footer_ul_style: {
     width: "100%",
-    height: "90px",
+    height: "12.5%",
     lineHeight: "56px",
     position: "absolute",
     justifyContent: "center",
@@ -177,7 +178,7 @@ export const footer = {
   },
   footer_button_style: {
     cursor: "pointer",
-    marginTop: "30px",
+    marginTop: "30%",
     transition: "2s ease",
   },
   footer_li_style: {
@@ -216,6 +217,7 @@ export const loader = {
 export const slider = {
   slider_style: {
     height: "91vh",
+    maxHeight: "100%",
     position: "absolute",
     zIndex: 100,
     left: 0,
@@ -229,14 +231,17 @@ export const slideShow = {
     position: "absolute",
     width: "100%",
     margin: "auto",
-    height: "500px",
+    height: "80vh",
   },
   slideShow_image_container: {
     zIndex: -10,
   },
   slideShow_image: {
     width: "100%",
-    height: "78.9vh",
+    height: "88vh",
+    maxHeight: "92vh",
     opacity: "60%",
+    // objectFit: "cover",
+    objectPosition: "center"
   },
 };

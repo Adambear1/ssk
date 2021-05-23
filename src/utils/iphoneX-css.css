@@ -9,6 +9,18 @@
     display: flex !important;
   }
 
+  .main-header{
+    height: 171px !important;
+  }
+
+  .main-header a {
+    margin-top: 30px;
+    font-size: 35px !important;
+    margin-left: 2px !important;
+    margin-right: 10px !important;
+    overflow-wrap:break-word !important;
+  }
+
   .transition-footer-bottom {
     top: 95% !important;
   }
@@ -51,8 +63,15 @@
     height: 110% !important;
   }
 
-  .each-fade img {
-    height: 720px !important;
+.each-fade img {
+    height: 1200px !important;
+    vertical-align: top !important;
+    /* object-fit: contain !important; */
+    object-position: center !important;
+    display: block !important;
+    width: auto !important;
+    overflow: hidden;
+    /* max-height:; */
   }
 
   .brand-logo {
@@ -62,6 +81,7 @@
 
   .logo {
     top: 50px !important;
+    height: 80% !important
   }
 
   .menu-container {
@@ -137,9 +157,6 @@
     margin-top: 125px !important;
     padding-left: auto !important;
     padding-right: auto !important;
-    /* padding: 0px !important; */
-    /* margin-left: auto !important;
-    margin-right: auto !important; */
   }
 
   .menu-modal-header{
@@ -160,10 +177,6 @@
     height: auto !important;
     padding: 0px !important
   }
-  .menu-modal-card p {
-    /* display: none !important; */
-  }
-
 
   .menu-modal-carousel {
     display: none !important
