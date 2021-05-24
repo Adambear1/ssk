@@ -3,6 +3,21 @@ export const contact = {
     display: "flex",
     justifyContent: "center",
   },
+  cater_style: {
+    color: "blue",
+    cursor: "pointer"
+  },
+  catering_menu_style: {
+    margin: "0px",
+    padding: "0px"
+  },
+  content_style : {
+    backgroundColor: "#fefefe",
+    margin: "8.25% auto",
+    padding: "20px",
+    border: "1px solid #888",
+    width: "60%",
+  }
 };
 export const header = {
     header_text_style : {
@@ -175,6 +190,7 @@ export const footer = {
     justifyContent: "center",
     padding: 0,
     margin: 0,
+    justifyContent: "center",
   },
   footer_button_style: {
     cursor: "pointer",
