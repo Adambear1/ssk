@@ -1,8 +1,7 @@
 {
-  "homepage": "https://adambear1.github.io/ssk",
   "name": "ssk",
   "version": "0.1.0",
-  "private": true,
+  "homepage": "https://adambear1.github.io/ssk",
   "dependencies": {
     "@testing-library/jest-dom": "^5.12.0",
     "@testing-library/react": "^11.2.7",
