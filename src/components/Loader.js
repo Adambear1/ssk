@@ -1,5 +1,6 @@
 import React from "react";
 import { loader } from "../utils/css";
+import "../utils/general-css.css"
 
 function Loader() {
   return (

@@ -12,7 +12,6 @@ html {
   --effect: hover 1s linear infinite;
 }
 
-
 /* Slideshow */
 
 .default-nav {
@@ -22,7 +21,6 @@ html {
 a {
   color: white;
 }
-
 
 .add_green i {
   transition: 2s ease;
@@ -50,4 +48,29 @@ image {
   image-rendering: crisp-edges;
   -ms-interpolation-mode: nearest-neighbor;
   /* IE (non-standard property) */
+}
+
+.loader {
+  display: flex;
+  justify-content: center;
+  align-content: center;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  -webkit-box-align: center;
+  -moz-box-align: center;
+  -ms-flex-align: center;
+  -webkit-align-items: center;
+  align-items: center;
+  justify-content: center;
+  -webkit-box-pack: center;
+  -moz-box-pack: center;
+  -ms-flex-pack: center;
+  -webkit-justify-content: center;
+  justify-content: center;
+}
+
+.loader h2{
+  margin-top: 10% !important;
+  margin-bottom: 10% !important;
 }

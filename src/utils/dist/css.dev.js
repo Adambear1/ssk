@@ -1,7 +1,16 @@
-export const contact = {
+"use strict";
+
+Object.defineProperty(exports, "__esModule", {
+  value: true
+});
+exports.slideShow = exports.slider = exports.loader = exports.footer = exports.bulletinBoard = exports.card = exports.menu = exports.header = exports.contact = void 0;
+
+function _defineProperty(obj, key, value) { if (key in obj) { Object.defineProperty(obj, key, { value: value, enumerable: true, configurable: true, writable: true }); } else { obj[key] = value; } return obj; }
+
+var contact = {
   icon_style: {
     display: "flex",
-    justifyContent: "center",
+    justifyContent: "center"
   },
   cater_style: {
     color: "blue",
@@ -11,28 +20,29 @@ export const contact = {
     margin: "0px",
     padding: "0px"
   },
-  content_style : {
+  content_style: {
     backgroundColor: "#fefefe",
     margin: "8.25% auto",
     padding: "20px",
     border: "1px solid #888",
-    width: "60%",
+    width: "60%"
   }
 };
-export const header = {
-    header_text_style : {
-        fontSize: "auto"
-    },
-    main_header : {
-      // height: "10%"
-    }
-}
-export const menu = {
+exports.contact = contact;
+var header = {
+  header_text_style: {
+    fontSize: "auto"
+  },
+  main_header: {// height: "10%"
+  }
+};
+exports.header = header;
+var menu = {
   row_style: {
-    marginBottom: "90px",
+    marginBottom: "90px"
   },
   container_style: {
-    marginTop: "20px",
+    marginTop: "20px"
   },
   img_style: {
     maxHeight: "50%",
@@ -44,7 +54,7 @@ export const menu = {
     borderRadius: "5px",
     objectFit: "cover",
     objectPosition: "100% 100%",
-    cursor: "pointer",
+    cursor: "pointer"
   },
   cover_style: {
     zIndex: 1000,
@@ -53,10 +63,10 @@ export const menu = {
     height: "100%"
   },
   footer_style: {
-    top: "-25px",
+    top: "-25px"
   },
   h5_style: {
-    margin: "0",
+    margin: "0"
   },
   modal_style: {
     position: "fixed",
@@ -66,27 +76,27 @@ export const menu = {
     width: "100%",
     height: "100%",
     overflow: "auto",
-    backgroundColor: "rgba(0,0,0,0.2)",
+    backgroundColor: "rgba(0,0,0,0.2)"
   },
   content_style: {
     backgroundColor: "#fefefe",
     margin: "8.25% auto",
     padding: "20px",
     border: "1px solid #888",
-    width: "37%",
+    width: "37%"
   },
   close_style: {
     color: "#aaa",
-    float: "right",
+    "float": "right",
     fontSize: "28px",
-    fontWeight: "bold",
+    fontWeight: "bold"
   },
   pagination_nav: {
     position: "absolute",
     bottom: "0",
     left: "0",
     right: "0",
-    width: "100%",
+    width: "100%"
   },
   pagination_ul: {
     display: "flex",
@@ -94,14 +104,14 @@ export const menu = {
     flexBasis: "auto",
     justifyContent: "center",
     alignContent: "space-between",
-    flexWrap: "wrap",
+    flexWrap: "wrap"
   },
   pagination_btn: {
     borderRadius: "40%",
     border: "2px solid black",
     backgroundColor: "white",
     marginLeft: "15px",
-    transition: "1s ease",
+    transition: "1s ease"
   },
   slider_img_style: {
     minWidth: "225px",
@@ -119,19 +129,19 @@ export const menu = {
     left: 0,
     right: 0,
     padding: 0,
-    margin: 0,
+    margin: 0
   },
   slider_a_style: {
     right: 0,
     left: 0,
     padding: 0,
-    margin: 0,
+    margin: 0
   },
   slider_span_style: {
     backgroundColor: "rgba(0,0,0,.6)",
     height: "auto",
     width: "auto",
-    borderTopRightRadius: "12px",
+    borderTopRightRadius: "12px"
   },
   slider_container_style: {
     top: "-25px",
@@ -140,20 +150,20 @@ export const menu = {
     right: 0,
     left: 0,
     padding: 0,
-    margin: 0,
-  },
+    margin: 0
+  }
 };
-
-export const card = {
+exports.menu = menu;
+var card = {
   h2_style: {
-    marginTop: "-22.5px",
+    marginTop: "-22.5px"
   },
   card_style: {
-    minWidth: "100%",
-  },
+    minWidth: "100%"
+  }
 };
-
-export const bulletinBoard = {
+exports.card = card;
+var bulletinBoard = {
   logo_main: {
     zIndex: 10,
     position: "absolute",
@@ -167,52 +177,50 @@ export const bulletinBoard = {
     backgroundPosition: "center center",
     backgroundSize: "cover",
     backgroundAttachment: "fixed",
-    backgroundRepeat: "no-repeat",
+    backgroundRepeat: "no-repeat"
   },
   logo_regular: {
     width: "80%",
     height: "100%",
-    marginLeft: "10%",
+    marginLeft: "10%"
   },
   logo_small: {
     width: "77%",
     height: "97%",
-    marginLeft: "11.5%",
-  },
+    marginLeft: "11.5%"
+  }
 };
-
-export const footer = {
-  footer_ul_style: {
+exports.bulletinBoard = bulletinBoard;
+var footer = {
+  footer_ul_style: _defineProperty({
     width: "100%",
     height: "12.5%",
     lineHeight: "56px",
     position: "absolute",
     justifyContent: "center",
     padding: 0,
-    margin: 0,
-    justifyContent: "center",
-  },
+    margin: 0
+  }, "justifyContent", "center"),
   footer_button_style: {
     cursor: "pointer",
     marginTop: "30%",
-    transition: "2s ease",
+    transition: "2s ease"
   },
   footer_li_style: {
     display: "inline",
-    margin: 50,
+    margin: 50
   },
   footer_icon_style: {
-    transition: "3s ease",
+    transition: "3s ease"
   },
   footer_close_style: {
     right: 0,
-    top: 0,
-  },
+    top: 0
+  }
 };
-
-export const loader = {
-  loader_logo: {
-    // display: "flex",
+exports.footer = footer;
+var loader = {
+  loader_logo: {// display: "flex",
     // flex: "center",
     // flexDirection: "center",
     // alignItems: "center",
@@ -235,11 +243,11 @@ export const loader = {
     fontFamily: "Helvetica, sans-serif, Arial",
     animation: "load 1.2s infinite 0s ease-in-out",
     animationDirection: "alternate",
-    textShadow: "0 0 1px white",
-  },
+    textShadow: "0 0 1px white"
+  }
 };
-
-export const slider = {
+exports.loader = loader;
+var slider = {
   slider_style: {
     height: "91vh",
     maxHeight: "100%",
@@ -247,19 +255,19 @@ export const slider = {
     zIndex: 100,
     left: 0,
     width: "100%",
-    opacity: "100%",
-  },
+    opacity: "100%"
+  }
 };
-
-export const slideShow = {
+exports.slider = slider;
+var slideShow = {
   slideShow_container: {
     position: "absolute",
     width: "100%",
     margin: "auto",
-    height: "80vh",
+    height: "80vh"
   },
   slideShow_image_container: {
-    zIndex: -10,
+    zIndex: -10
   },
   slideShow_image: {
     width: "100%",
@@ -268,5 +276,6 @@ export const slideShow = {
     opacity: "60%",
     // objectFit: "cover",
     objectPosition: "center"
-  },
+  }
 };
+exports.slideShow = slideShow;
