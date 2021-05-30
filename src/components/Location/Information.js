@@ -9,7 +9,7 @@ function Information() {
         // margin: "50px"
     }
     return (
-        <>
+        <div>
             <Card name="Location" color="green" accent={true}>
             <div class="card-content container">
               <p>
@@ -21,7 +21,7 @@ function Information() {
               </p>
               </div>
             </Card>
-        </>
+        </div>
     )
 }
 

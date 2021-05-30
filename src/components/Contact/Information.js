@@ -7,7 +7,7 @@ import Modal from "./Modal";
 function Information({ social_media }) {
   const [show, setShow] = React.useState(false)
   return (
-    <>
+    <div>
     {show && <Modal show={show} setShow={setShow}><CateringMenu/></Modal>}
       <Card name="Contact" color="red" accent={true}>
         <div className="card-stacked">
@@ -64,7 +64,7 @@ function Information({ social_media }) {
           </div>
         </div>
       </Card>
-    </>
+    </div>
   );
 }
 

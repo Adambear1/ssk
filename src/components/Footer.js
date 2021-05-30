@@ -44,7 +44,7 @@ function Footer({ display, setDisplay, styles }) {
     // display && setTimeout(() => {}, footer_timer);
   };
   return (
-    <>
+    <div>
       <ul
         className={`center orange accent-3 footer-nav animate__animated animate__fadeIn ${
           !display ? "transition-footer-bottom" : "transition-footer-top"
@@ -130,7 +130,7 @@ function Footer({ display, setDisplay, styles }) {
               </a>
             )}
             {display && (
-              <>
+              <div>
                 {
                   // eslint-disable-next-line
                 }
@@ -151,12 +151,12 @@ function Footer({ display, setDisplay, styles }) {
                     </i>
                   )}
                 </a>
-              </>
+              </div>
             )}
           </li>
         )}
       </ul>
-    </>
+    </div>
   );
 }
 

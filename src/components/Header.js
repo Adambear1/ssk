@@ -3,7 +3,7 @@ import { header } from "../utils/css";
 
 function Header() {
   return (
-    <>
+    <div>
       <nav className="animate__animated animate__fadeIn main-header" style={header.main_header}>
         <div className="nav-wrapper white main-header" >
           <a
@@ -14,7 +14,7 @@ function Header() {
           </a>
         </div>
       </nav>
-    </>
+    </div>
   );
 }
 

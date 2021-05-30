@@ -3,7 +3,7 @@ import { slider } from "../utils/css";
 
 function Slider({ display, children }) {
   return (
-    <>
+    <div>
       {
         <div
           style={slider.slider_style}
@@ -16,7 +16,7 @@ function Slider({ display, children }) {
           {children}
         </div>
       }
-    </>
+    </div>
   );
 }
 
