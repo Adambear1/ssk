@@ -19,8 +19,8 @@ function SlideShow({ children }) {
     >
       {children}
       <Fade>
-        {images.map((src) => (
-          <div class="each-fade animate__animated animate__fadeIn">
+        {images.map((src, index) => (
+          <div class="each-fade animate__animated animate__fadeIn" key={index}>
             <div
               className="image-slideShow.slideShow_image_container "
               style={slideShow.slideShow_image_container}

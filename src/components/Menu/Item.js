@@ -5,7 +5,7 @@ import Slider from "./Slider";
 
 function Item({ name, src, desc, setShow, all_photos, cat, type, gf }) {
   return (
-    <Modal setShow={setShow}>
+    <Modal setShow={setShow} name={name}>
       <Slider images={[src, ...all_photos]} name={name} />
       <div style={menu.footer_style} className="menu-container-item"></div>
       <div className="card-action menu-modal-card">

@@ -6,9 +6,15 @@ import Footer from "../components/Footer";
 import Header from "../components/Header";
 import Slider from "../components/Slider";
 import Menu from "../components/Menu";
+import dataLayer from "../dataLayer";
 
 function Home() {
   const [display, setDisplay] = useState(null);
+  const [currentPage, setCurrentPage] = useState("home");
+  React.useEffect(()=> {
+    dataLayer({eventCategory: "home", eventAction: "pageView", eventLabel: currentPage});
+    setCurrentPage("home");
+  },[]);
   const styles = {
         height: "90vh",
         position: "absolute",
@@ -25,9 +31,9 @@ function Home() {
       <Slider
         display={display}
       >
-          {display === "Menu" && <Menu styles={styles}/>}
-          {display === "Contact" && <Contact styles={styles}/>}
-          {display === "Map" &&  <Location styles={styles}/>}
+          {display === "Menu" && <Menu styles={styles} currentPage={currentPage} setCurrentPage={setCurrentPage}/>}
+          {display === "Contact" && <Contact styles={styles} currentPage={currentPage} setCurrentPage={setCurrentPage}/>}
+          {display === "Map" &&  <Location styles={styles} currentPage={currentPage} setCurrentPage={setCurrentPage}/>}
       </Slider>
     </div>
   );

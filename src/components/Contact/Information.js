@@ -58,8 +58,8 @@ function Information({ social_media }) {
             className="card-action align social-media-container"
             style={contact.icon_style}
           >
-            {social_media.map(({ button }) => (
-              <td dangerouslySetInnerHTML={{ __html: button }} />
+            {social_media.map(({ button }, index) => (
+              <td dangerouslySetInnerHTML={{ __html: button }} key={index} />
             ))}
           </div>
         </div>

@@ -1,7 +1,12 @@
 import React from "react";
+import dataLayer from "../../dataLayer";
 import Information from "./Information";
 
-function Contact() {
+function Contact({currentPage, setCurrentPage}) {
+  React.useEffect(()=> {
+    dataLayer({eventCategory: "contact", eventAction: "pageView", eventLabel: currentPage});
+    setCurrentPage("contact");
+  },[])
   const social_media = [
     {
       name: "Facebook",

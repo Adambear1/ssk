@@ -1,12 +1,9 @@
 import React, { useState } from "react";
 import logo from "../assets/logo.png";
+import dataLayer from "../dataLayer";
 import { bulletinBoard } from "../utils/css";
 import SlideShow from "./SlideShow";
 function BulletinBoard() {
-  console.log("width: ", window.screen.width)
-  console.log("height: ", window.screen.height)
-
-
   const [logoStyle, setLogoStyle] = useState({
     ...bulletinBoard.logo_main,
     ...bulletinBoard.logo_regular,
@@ -20,7 +17,11 @@ function BulletinBoard() {
         children={
           <img
             className="logo"
-            onMouseDown={() => setLogoStyle({ ...bulletinBoard.logo_main, ...bulletinBoard.logo_small })}
+            onMouseDown={() => {
+              dataLayer({eventCategory: "home", eventAction: "iconInteraction", eventLabel: "click"})
+              setLogoStyle({ ...bulletinBoard.logo_main, ...bulletinBoard.logo_small })
+            }
+          }
             onMouseUp={() => setLogoStyle({ ...bulletinBoard.logo_main, ...bulletinBoard.logo_regular })}
             src={logo}
             style={logoStyle}

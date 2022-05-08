@@ -1,4 +1,5 @@
 import React from "react";
+import dataLayer from "../../dataLayer";
 import chicken1 from "../../assets/chicken1.jpg";
 import chicken2 from "../../assets/chicken2.jpg";
 import chicken3 from "../../assets/chicken3.jpg";
@@ -83,7 +84,10 @@ console.log(window.screen)
   const indexOfLastPost = currentPage * postsPerPage;
   const indexOfFirstPost = indexOfLastPost - postsPerPage;
   const currentPosts = items.slice(indexOfFirstPost, indexOfLastPost);
-  const paginate = (pageNumber) => setCurrentPage(pageNumber);
+  const paginate = (pageNumber) => {
+    dataLayer({eventCategory: "menu", eventAction: "pagination", eventLabel: pageNumber})
+    setCurrentPage(pageNumber)
+  }
   return (
     <div className="container menu-container">
       {show && (
@@ -99,12 +103,15 @@ console.log(window.screen)
         />
       )}
       <div className="row" style={menu.row_style}>
-        {currentPosts.map(({ src, name, desc, cat, all_photos, type, gf }) => (
+        {currentPosts.map(({ src, name, desc, cat, all_photos, type, gf }, index) => (
           <div
+            key={index}
             className="col s3"
             style={menu.container_style}
-            onClick={() =>
-              setShow({ src, name, desc, cat, all_photos, type, gf })
+            onClick={() => {
+              dataLayer({eventCategory: "menu", eventAction: "foodCard", eventLabel: "view" + " | " + name})
+              return setShow({ src, name, desc, cat, all_photos, type, gf })
+            }
             }
           >
             <div className="waves-effect waves-light" style={menu.cover_style}>
