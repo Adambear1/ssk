@@ -11,6 +11,7 @@ function Slider({ images, name }) {
       height: 600,
       width: 600,
     });
+    console.log(instances)
   }, []);
   return (
       <div className="carousel menu-modal-carousel" style={menu.slider_container_style}>
@@ -19,7 +20,7 @@ function Slider({ images, name }) {
               <a 
               key={index}
               className="carousel-item" style={menu.slider_a_style} 
-              onMouseDown={() => dataLayer({eventCategory: "menu", eventAction: "foodCard", eventLabel: "swipe" + " | " + name})}
+              onMouseDown={() => dataLayer({eventCategory: "menu", eventAction: "foodCard", eventLabel: "swipe | " + name})}
               >
                 <img src={src} style={menu.slider_img_style} alt={name} />
               </a>

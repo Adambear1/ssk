@@ -80,7 +80,6 @@ function Container() {
  
   const [currentPage, setCurrentPage] = React.useState(1);
   const [postsPerPage] = React.useState(window && window.screen.width > 1024 ? 8 : window.screen.width > 500 ? 3 : 2);
-console.log(window.screen)
   const indexOfLastPost = currentPage * postsPerPage;
   const indexOfFirstPost = indexOfLastPost - postsPerPage;
   const currentPosts = items.slice(indexOfFirstPost, indexOfLastPost);
@@ -109,13 +108,13 @@ console.log(window.screen)
             className="col s3"
             style={menu.container_style}
             onClick={() => {
-              dataLayer({eventCategory: "menu", eventAction: "foodCard", eventLabel: "view" + " | " + name})
+              dataLayer({eventCategory: "menu", eventAction: "foodCard", eventLabel: "view | " + name})
               return setShow({ src, name, desc, cat, all_photos, type, gf })
             }
             }
           >
             <div className="waves-effect waves-light" style={menu.cover_style}>
-              <img src={src} style={menu.img_style} />
+              <img src={src} style={menu.img_style} alt={name}/>
             </div>
           </div>
         ))}

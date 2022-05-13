@@ -1,5 +1,5 @@
 import React from "react";
-import { slider } from "../utils/css";
+import { slider } from "../../utils/css";
 
 function Slider({ display, children }) {
   return (

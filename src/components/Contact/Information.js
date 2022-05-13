@@ -2,8 +2,9 @@ import React from "react";
 import { contact } from "../../utils/css";
 import Card from "../Card";
 import LinksTag from "../LinksTag";
-import CateringMenu from "./CateringMenu";
-import Modal from "./Modal";
+import CateringMenu from "../Catering/CateringMenu";
+import Modal from "../Modal";
+import dataLayer from "../../dataLayer";
 function Information({ social_media }) {
   const [show, setShow] = React.useState(false)
   return (
@@ -17,11 +18,11 @@ function Information({ social_media }) {
             <p>
               Follow our social media to stay to date with latest events, menu
               changes, and news! Our Direct Messages are open 24/7 and we read
-              and respond to all messages ASAP. 👉📧👻📱
+              and respond to all messages ASAP. <span role="img" aria-label="emoji">👉📧👻📱</span>
             </p>
             <br />
             <p>
-              🏆😋🥩🔥 We value all our loyal customers! To be one, join our{" "}
+            <span role="img" aria-label="emoji">🏆😋🥩🔥</span> We value all our loyal customers! To be one, join our{" "}
               <LinksTag
                 link={"http://bit.ly/sevensons"}
                 msg={"VIP Mailing list"}
@@ -38,19 +39,17 @@ function Information({ social_media }) {
               talk all feedback and constructive criticism to heart! Feel free
               to{" "}
               <LinksTag
-                link={
-                  "mailto:SevenSonsKitchen@gmail.com?subject='We Love Seven Sons!'"
-                }
+                link={"mailto:SevenSonsKitchen@gmail.com?subject='We Love Seven Sons!'"}
                 msg={"EMAIL"}
               />{" "}
-              us! 💪❤️🤗
+              us! <span role="img" aria-label="emoji">💪❤️🤗</span>
             </p>
             <br />
             <br />
             <p className="center">
               For all pre-orders, please make payment to our{" "}
               <LinksTag link={"https://lnkd.in/gzBxRUz"} msg={"Cash App"} />!
-              💪❤️🤗
+              <span role="img" aria-label="emoji">💪❤️🤗</span>
             </p>
             <br />
           </div>
@@ -58,8 +57,8 @@ function Information({ social_media }) {
             className="card-action align social-media-container"
             style={contact.icon_style}
           >
-            {social_media.map(({ button }, index) => (
-              <td dangerouslySetInnerHTML={{ __html: button }} key={index} />
+            {social_media.map(({ button, name }, index) => (
+              <td dangerouslySetInnerHTML={{ __html: button }} key={index} onClick={()=> dataLayer({eventCategory: "contact", eventAction: "linkClicked", eventLabel: name})} />
             ))}
           </div>
         </div>

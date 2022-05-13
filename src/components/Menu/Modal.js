@@ -3,7 +3,7 @@ import dataLayer from "../../dataLayer";
 import { menu } from "../../utils/css";
 
 const closeWindow = (n, prop) => {
-  dataLayer({eventCategory: "menu", eventAction: "foodCard", eventLabel: "close" + " | " + n})
+  dataLayer({eventCategory: "menu", eventAction: "foodCard", eventLabel: "close | " + n})
   prop(null);
 };
 

@@ -37,6 +37,16 @@ a {
   color: yellow !important;
 }
 
+.add_brown i {
+  transition: 2s ease;
+  color: brown !important;
+}
+
+.add_light_gray {
+  transition: 2s ease;
+  color: lightgray !important;
+}
+
 img,
 image {
   image-rendering: -moz-crisp-edges;

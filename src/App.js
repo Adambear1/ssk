@@ -18,12 +18,13 @@ const Home = lazy(() => import("./pages/Home"));
 function App() {
   const [loading, setLoading] = useState(true);
   useEffect(() => {
-    setTimeout(() => setLoading(false), load_timer);
+    const isDev = window.location.href.includes("http://localhost");
+    const timer = isDev ? 0 : load_timer
+    setTimeout(() => setLoading(false), timer);
   }, []);
   const tagManagerArgs = {
     gtmId: "GTM-N5D3GQX",
   };
-
   TagManager.initialize(tagManagerArgs);
   return (
     <Router>

@@ -184,11 +184,10 @@ export const bulletinBoard = {
 export const footer = {
   footer_ul_style: {
     width: "100%",
-    height: "12.5%",
+    height: "14.5%",
     lineHeight: "56px",
     position: "absolute",
-    justifyContent: "center",
-    padding: 0,
+    padding: "25px",
     margin: 0,
     justifyContent: "center",
   },
@@ -200,6 +199,13 @@ export const footer = {
   footer_li_style: {
     display: "inline",
     margin: 50,
+  },
+  footer_button_close_style: {
+    border: "5px solid white",
+    borderRadius: "50%",
+    position: "absolute",
+    right: "20px"
+    // margin: "10px"
   },
   footer_icon_style: {
     transition: "3s ease",
@@ -268,5 +274,15 @@ export const slideShow = {
     opacity: "60%",
     // objectFit: "cover",
     objectPosition: "center"
+  },
+};
+
+export const {staticDisplay} = {
+  staticDisplay: {
+    position: "absolute",
+    width: "100%",
+    margin: "auto",
+    height: "80vh",
+    backgroundColor: "lightgray"
   },
 };

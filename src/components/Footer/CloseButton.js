@@ -2,7 +2,7 @@ import React from 'react'
 import dataLayer from '../../dataLayer'
 
 
-function Buttons({footer: {footer_button_style, footer_icon_style, footer_li_style}, title, colors, icon_name, transition, display, currentPage}) {
+function CloseButton({footer: {footer_button_style, footer_icon_style, footer_li_style, footer_button_close_style}, title, colors, icon_name, transition, display, currentPage}) {
   return (
     <li style={footer_li_style} 
     onMouseOver={({target})=> {
@@ -16,14 +16,14 @@ function Buttons({footer: {footer_button_style, footer_icon_style, footer_li_sty
       // eslint-disable-next-line
     }
     <a
-      onClick={() => transition(title)}
+      onClick={() => transition('')}
       style={footer_button_style}
       title={title}
       className={`${display === title && colors}`}
     >
       <i
         className="material-icons medium"
-        style={footer_icon_style}
+        style={{...footer_icon_style, ...footer_button_close_style}}
       >
         {icon_name}
       </i>
@@ -32,4 +32,4 @@ function Buttons({footer: {footer_button_style, footer_icon_style, footer_li_sty
   )
 }
 
-export default Buttons
+export default CloseButton
