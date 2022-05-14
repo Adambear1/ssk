@@ -1,10 +1,8 @@
 import React from 'react'
-import dataLayer from '../../dataLayer';
 import Information from './Information';
 
 function Catering({currentPage, setCurrentPage}) {
   React.useEffect(()=> {
-    dataLayer({eventCategory: "contact", eventAction: "pageView", eventLabel: currentPage});
     setCurrentPage("contact");
   },[])
  

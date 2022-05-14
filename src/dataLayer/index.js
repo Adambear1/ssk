@@ -1,7 +1,7 @@
-export default (props) => {
+export default (event, props) => {
   var dataLayer = window.dataLayer || [];
   dataLayer.push({
-    event: "customEvent",
+    event,
     ...props
   })
 

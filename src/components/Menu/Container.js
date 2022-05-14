@@ -84,7 +84,7 @@ function Container() {
   const indexOfFirstPost = indexOfLastPost - postsPerPage;
   const currentPosts = items.slice(indexOfFirstPost, indexOfLastPost);
   const paginate = (pageNumber) => {
-    dataLayer({eventCategory: "menu", eventAction: "pagination", eventLabel: pageNumber})
+    dataLayer("interaction", {category: "menu", action: "pagination", label: pageNumber})
     setCurrentPage(pageNumber)
   }
   return (
@@ -108,7 +108,7 @@ function Container() {
             className="col s3"
             style={menu.container_style}
             onClick={() => {
-              dataLayer({eventCategory: "menu", eventAction: "foodCard", eventLabel: "view | " + name})
+              dataLayer("interaction", {category: "menu", action: "foodCard", label: "view", misc: name})
               return setShow({ src, name, desc, cat, all_photos, type, gf })
             }
             }

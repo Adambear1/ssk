@@ -23,7 +23,7 @@ const isSmall = window.innerWidth < 769;
           <img
             className="logo"
             onMouseDown={() => {
-              dataLayer({eventCategory: "home", eventAction: "iconInteraction", eventLabel: "click"})
+              dataLayer("interaction", {category: "home", action: "iconInteraction", label: "click"})
               setLogoStyle({ ...bulletinBoard.logo_main, ...bulletinBoard.logo_small })
             }
           }
@@ -39,7 +39,7 @@ const isSmall = window.innerWidth < 769;
           <img
             className="logo"
             onMouseDown={() => {
-              dataLayer({eventCategory: "home", eventAction: "iconInteraction", eventLabel: "click"})
+              dataLayer("interaction", {category: "home", action: "iconInteraction", label: "click"})
               setLogoStyle({ ...bulletinBoard.logo_main, ...bulletinBoard.logo_small })
             }
           }

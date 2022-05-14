@@ -13,12 +13,19 @@ function Home() {
   const [display, setDisplay] = useState(null);
   const [currentPage, setCurrentPage] = useState("home");
   React.useEffect(()=> {
-    dataLayer({eventCategory: "home", eventAction: "pageView", eventLabel: currentPage});
     setCurrentPage("home");
   },[]);
+  React.useEffect(()=>{
+    document.title = `Seven Son's Kitchen - ${currentPage.replace(
+      /\w\S*/g,
+      function(txt) {
+        return txt.charAt(0).toUpperCase() + txt.substr(1).toLowerCase();
+      }
+    )}`
+  }, [currentPage])
   navigator.getBattery().then(b => {
-    console.log("Here")
-    console.log(b)})
+    console.log(b)});
+
   const styles = {
         height: "90vh",
         position: "absolute",

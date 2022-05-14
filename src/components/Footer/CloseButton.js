@@ -3,13 +3,14 @@ import dataLayer from '../../dataLayer'
 
 
 function CloseButton({footer: {footer_button_style, footer_icon_style, footer_li_style, footer_button_close_style}, title, colors, icon_name, transition, display, currentPage}) {
+  const width = window.screen.width / 20;
   return (
     <li style={footer_li_style} 
     onMouseOver={({target})=> {
-      dataLayer({eventCategory: currentPage, eventAction: "iconLink", eventLabel: "hover | " + title})
+      dataLayer("interaction", {category: currentPage, action: "iconInteraction", label: "hover", misc: title})
       target.parentNode.parentNode.classList.add(colors)}
     }
-    onClick={()=> dataLayer({eventCategory: currentPage, eventAction: "iconLink", eventLabel: "click | " + title})}
+    onClick={()=> dataLayer("interaction", {category: currentPage, action: "iconInteraction", label: "click", misc: title})}
     onMouseOut={({target})=> Array.from(target.parentNode.parentNode.classList).length > 0 && target.parentNode.parentNode.classList.remove(colors)}
     >
     {

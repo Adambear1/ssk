@@ -1,10 +1,8 @@
 import React from 'react'
-import dataLayer from '../../dataLayer';
 import Information from './Information'
 
 function Location({currentPage, setCurrentPage}) {
     React.useEffect(()=> {
-        dataLayer({eventCategory: "location", eventAction: "pageView", eventLabel: currentPage});
         setCurrentPage("menu");
       },[])
     return (

@@ -23,7 +23,7 @@ function Information({ social_media }) {
             <br />
             <p className="center">
               For all pre-orders, please make payment to our{" "}
-              <LinksTag link={"https://lnkd.in/gzBxRUz"} msg={"Cash App"} />!
+              <LinksTag link={"https://lnkd.in/gzBxRUz"} msg={"Cash App"} category={"Catering"} />!
               <span role="img" aria-label="emoji">💪❤️🤗</span>
             </p>
             <br />

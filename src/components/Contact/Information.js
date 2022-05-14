@@ -26,6 +26,7 @@ function Information({ social_media }) {
               <LinksTag
                 link={"http://bit.ly/sevensons"}
                 msg={"VIP Mailing list"}
+                category={"contact"}
               />
               , were they are first to hear all special promotions, future
               events, and much more!
@@ -41,6 +42,7 @@ function Information({ social_media }) {
               <LinksTag
                 link={"mailto:SevenSonsKitchen@gmail.com?subject='We Love Seven Sons!'"}
                 msg={"EMAIL"}
+                category={"contact"}
               />{" "}
               us! <span role="img" aria-label="emoji">💪❤️🤗</span>
             </p>
@@ -48,7 +50,7 @@ function Information({ social_media }) {
             <br />
             <p className="center">
               For all pre-orders, please make payment to our{" "}
-              <LinksTag link={"https://lnkd.in/gzBxRUz"} msg={"Cash App"} />!
+              <LinksTag link={"https://lnkd.in/gzBxRUz"} msg={"Cash App"}  category={"contact"}/>!
               <span role="img" aria-label="emoji">💪❤️🤗</span>
             </p>
             <br />
@@ -58,7 +60,7 @@ function Information({ social_media }) {
             style={contact.icon_style}
           >
             {social_media.map(({ button, name }, index) => (
-              <td dangerouslySetInnerHTML={{ __html: button }} key={index} onClick={()=> dataLayer({eventCategory: "contact", eventAction: "linkClicked", eventLabel: name})} />
+              <td dangerouslySetInnerHTML={{ __html: button }} key={index} onClick={()=> dataLayer("interaction", {category: "contact", action: "linkClicked", label: name})} />
             ))}
           </div>
         </div>

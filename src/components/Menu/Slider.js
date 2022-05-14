@@ -20,7 +20,7 @@ function Slider({ images, name }) {
               <a 
               key={index}
               className="carousel-item" style={menu.slider_a_style} 
-              onMouseDown={() => dataLayer({eventCategory: "menu", eventAction: "foodCard", eventLabel: "swipe | " + name})}
+              onMouseDown={() => dataLayer("interaction", {category: "menu", action: "foodCard", label: "swipe", misc: name})}
               >
                 <img src={src} style={menu.slider_img_style} alt={name} />
               </a>

@@ -5,7 +5,6 @@ import Container from './Container'
 
 function Menu({currentPage, setCurrentPage}) {
     React.useEffect(()=> {
-        dataLayer({eventCategory: "menu", eventAction: "pageView", eventLabel: currentPage});
         setCurrentPage("menu");
       },[])
     return (

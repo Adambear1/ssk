@@ -1,37 +1,31 @@
 import React from "react";
-import dataLayer from "../../dataLayer";
 import Information from "./Information";
 
 function Contact({currentPage, setCurrentPage}) {
   React.useEffect(()=> {
-    dataLayer({eventCategory: "contact", eventAction: "pageView", eventLabel: currentPage});
     setCurrentPage("contact");
   },[])
   const social_media = [
     {
       name: "Facebook",
-      link: "",
       button: `<a className="waves-effect center waves-light btn-large social-media-btn social facebook blue darken-4" href="http://bit.ly/sevensons-fb" target="_blank" rel="noreferrer">
             <i className="fa fa-facebook center"></i>   Facebook</a>`,
       screenshot: "",
     },
     {
       name: "Instagram",
-
       button: `<a className="waves-effect center waves-light btn-large social-media-btn social instagram pink lighten-1" href="http://bit.ly/ssk-ig" target="_blank" rel="noreferrer">
             <i className="fa fa-instagram center"></i>  Instagram</a>`,
       screenshot: "",
     },
     {
-      name: "LinkedIn",
-      link: "",
+      name: "Twitter",
       button: `<a className="waves-effect center waves-light btn-large social-media-btn social twitter blue lighten-3" href="https://twitter.com/7SonsKitchen" target="_blank" rel="noreferrer">
             <i className="fa fa-twitter center"></i>    Twitter</a>`,
       screenshot: "",
     },
     {
-      name: "Twitter",
-      link: "",
+      name: "LinkedIn",
       button: `<a className="waves-effect center waves-light btn-large social-media-btn social linkedin blue" href="http://bit.ly/ssk-linkedin
             " target="_blank" rel="noreferrer">
             <i className="fa fa-linkedin center"></i>   LinkedIn</a>`,
