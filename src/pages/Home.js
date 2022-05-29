@@ -6,12 +6,15 @@ import Footer from "../components/Footer";
 import Header from "../components/Header";
 import Slider from "../components/Slider";
 import Menu from "../components/Menu";
-import dataLayer from "../dataLayer";
+import {useDispatch, useSelector} from "react-redux"
 import Catering from "../components/Catering";
 
 function Home() {
   const [display, setDisplay] = useState(null);
   const [currentPage, setCurrentPage] = useState("home");
+  const store = useSelector(store => store);
+  const [payload, setPayload] = useState(store || {});
+  const dispatch = useDispatch();
   React.useEffect(()=> {
     setCurrentPage("home");
   },[]);
@@ -22,10 +25,19 @@ function Home() {
         return txt.charAt(0).toUpperCase() + txt.substr(1).toLowerCase();
       }
     )}`
-  }, [currentPage])
-  navigator.getBattery().then(b => {
-    console.log(b)});
-
+  }, [currentPage]);
+  window.addEventListener("resize", ({currentTarget: {outerWidth, outerHeight}}) => {
+    setPayload({...payload, height: outerHeight, width: outerWidth})
+  });
+  navigator.getBattery().then(({level})=> {
+    setPayload({...payload, battery : level})
+  });
+  React.useMemo(()=>{    
+      dispatch({type: "SETTINGS_CHANGE", payload});
+  }, [])
+  
+console.log(payload)
+console.log(store)
   const styles = {
         height: "90vh",
         position: "absolute",

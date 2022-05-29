@@ -1,6 +1,6 @@
 {
   "name": "ssk",
-  "homepage": "http://tacomasbestbbq.com/",
+  "homepage": "https://adambear1.github.io/",
   "version": "0.1.0",
   "dependencies": {
     "@testing-library/jest-dom": "^5.12.0",
@@ -13,9 +13,11 @@
     "react": "^17.0.2",
     "react-dom": "^17.0.2",
     "react-gtm-module": "^2.0.11",
+    "react-redux": "^8.0.1",
     "react-router-dom": "^5.2.0",
-    "react-scripts": "^1.1.5",
+    "react-scripts": "^5.0.1",
     "react-slideshow-image": "^3.4.6",
+    "redux": "^4.2.0",
     "web-vitals": "^1.1.2"
   },
   "scripts": {
@@ -30,6 +32,18 @@
     "extends": [
       "react-app",
       "react-app/jest"
+    ]
+  },
+  "browserslist": {
+    "production": [
+      ">0.2%",
+      "not dead",
+      "not op_mini all"
+    ],
+    "development": [
+      "last 1 chrome version",
+      "last 1 firefox version",
+      "last 1 safari version"
     ]
   }
 }
