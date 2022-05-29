@@ -13,13 +13,13 @@ import "./utils/iphoneX-css.css";
 import "./utils/ipad-css.css";
 import "./utils/general-css.css";
 import "./utils/transition-css.css";
-import TagManager from "react-gtm-module";
+// import TagManager from "react-gtm-module";
 const Home = lazy(() => import("./pages/Home"));
 
-const tagManagerArgs = {
-  gtmId: "GTM-N5D3GQX",
-};
-TagManager.initialize(tagManagerArgs);
+// const tagManagerArgs = {
+//   gtmId: "GTM-N5D3GQX",
+// };
+// TagManager.initialize(tagManagerArgs);
 
 function App() {
   const [loading, setLoading] = useState(true);
