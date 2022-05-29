@@ -8,7 +8,6 @@ import CloseButton from "./CloseButton"
 function Footer({ display, setDisplay, styles, currentPage, setCurrentPage}) {
   const [transitionUp, setTransitionUp] = useState(false);
   const [transitionDown, setTransitionDown] = useState(false);
-  console.log(transitionUp, transitionDown)
   const transitionClose = () => {
     setTimeout(() => {
       setDisplay(null);

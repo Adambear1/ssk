@@ -29,15 +29,13 @@ function Home() {
   window.addEventListener("resize", ({currentTarget: {outerWidth, outerHeight}}) => {
     setPayload({...payload, height: outerHeight, width: outerWidth})
   });
-  navigator.getBattery().then(({level})=> {
-    setPayload({...payload, battery : level})
-  });
   React.useMemo(()=>{    
+    navigator.getBattery().then(({level})=> {
+      setPayload({...payload, battery : level})
+    });
       dispatch({type: "SETTINGS_CHANGE", payload});
   }, [])
   
-console.log(payload)
-console.log(store)
   const styles = {
         height: "90vh",
         position: "absolute",
