@@ -6,15 +6,15 @@ import Footer from "../components/Footer";
 import Header from "../components/Header";
 import Slider from "../components/Slider";
 import Menu from "../components/Menu";
-import {useDispatch, useSelector} from "react-redux"
+// import {useDispatch, useSelector} from "react-redux"
 import Catering from "../components/Catering";
 
 function Home() {
   const [display, setDisplay] = useState(null);
   const [currentPage, setCurrentPage] = useState("home");
-  const store = useSelector(store => store);
-  const [payload, setPayload] = useState(store || {});
-  const dispatch = useDispatch();
+  // const store = useSelector(store => store);
+  const [payload, setPayload] = useState(/*store ||*/ {});
+  // const dispatch = useDispatch();
   React.useEffect(()=> {
     setCurrentPage("home");
   },[]);
@@ -33,7 +33,7 @@ function Home() {
     navigator.getBattery().then(({level})=> {
       setPayload({...payload, battery : level})
     });
-      dispatch({type: "SETTINGS_CHANGE", payload});
+      // dispatch({type: "SETTINGS_CHANGE", payload});
   }, [])
   
   const styles = {

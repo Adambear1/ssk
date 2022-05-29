@@ -4,7 +4,7 @@ import "react-slideshow-image/dist/styles.css";
 import Loader from "./components/Loader";
 import { load_timer } from "./utils/timers";
 import reducer from "./reducer";
-import { createStore } from "redux";
+// import { createStore } from "redux";
 import { Provider } from "react-redux";
 import "./utils/desktop-css.css";
 import "./utils/iphone5-css.css";
@@ -23,14 +23,14 @@ TagManager.initialize(tagManagerArgs);
 
 function App() {
   const [loading, setLoading] = useState(true);
-  const store = createStore(reducer);
+  // const store = createStore(reducer);
   useEffect(() => {
     const timer = window.location.href.includes("http://localhost:3000/") ? 0 : load_timer;
     setTimeout(() => setLoading(false), timer);
   }, []);
 
   return (
-    <Provider store={store}>
+    // <Provider store={store}>
     <Router>
       <Suspense fallback={<Loader />}>
         <Switch>
@@ -38,7 +38,7 @@ function App() {
         </Switch>
       </Suspense>
     </Router>
-    </Provider>
+    // </Provider>
   );
 }
 
