@@ -120,7 +120,7 @@ self.__precacheManifest = [
     "url": "./static/media/gumbo1.1c830504.jpg"
   },
   {
-    "revision": "4366eb00b8554a51d973f68f65cc9786",
+    "revision": "b92edb36cdf89079e2ab1426169a702a",
     "url": "./index.html"
   }
 ];
