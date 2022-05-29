@@ -11,7 +11,7 @@ function BulletinBoard() {
   });
 
 
-const isSmall = window.innerWidth < 769;
+// const isSmall = window.innerWidth < 769;
 
   return (
     <div
@@ -19,21 +19,21 @@ const isSmall = window.innerWidth < 769;
       style={{ width: "100%", height: "80vh" }}
     >
       {
-        isSmall ? <Static children={
-          <img
-            className="logo"
-            onMouseDown={() => {
-              dataLayer("interaction", {category: "home", action: "iconInteraction", label: "click"})
-              setLogoStyle({ ...bulletinBoard.logo_main, ...bulletinBoard.logo_small })
-            }
-          }
-            onMouseUp={() => setLogoStyle({ ...bulletinBoard.logo_main, ...bulletinBoard.logo_regular })}
-            src={logo}
-            style={logoStyle}
-            alt="Company Logo"
-            title="Seven Son's Kitchen!"
-          />
-        }/> :
+        // isSmall ? <Static children={
+        //   <img
+        //     className="logo"
+        //     onMouseDown={() => {
+        //       dataLayer("interaction", {category: "home", action: "iconInteraction", label: "click"})
+        //       setLogoStyle({ ...bulletinBoard.logo_main, ...bulletinBoard.logo_small })
+        //     }
+        //   }
+        //     onMouseUp={() => setLogoStyle({ ...bulletinBoard.logo_main, ...bulletinBoard.logo_regular })}
+        //     src={logo}
+        //     style={logoStyle}
+        //     alt="Company Logo"
+        //     title="Seven Son's Kitchen!"
+        //   />
+        // }/> :
       <SlideShow
         children={
           <img

@@ -25,8 +25,8 @@ function App() {
   const [loading, setLoading] = useState(true);
   // const store = createStore(reducer);
   useEffect(() => {
-    const timer = window.location.href.includes("http://localhost:3000/") ? 0 : load_timer;
-    setTimeout(() => setLoading(false), timer);
+    // const timer = window.location.href.includes("http://localhost:3000/") ? 0 : load_timer;
+    setTimeout(() => setLoading(false), /*timer*/);
   }, []);
 
   return (
