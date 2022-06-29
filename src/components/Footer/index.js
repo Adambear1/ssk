@@ -71,9 +71,9 @@ function Footer({ display, setDisplay, styles, currentPage, setCurrentPage}) {
         style={footer.footer_ul_style}
       >
         {list_items.map(({title, colors, icon_name}, index)=>{
-                  return <Buttons key={index} footer={footer} title={title} colors={colors} icon_name={icon_name} transition={transition} display={display} currentPage={currentPage} setCurrentPage={setCurrentPage}/>
+                  return <Buttons key={index} title={title} colors={colors} icon_name={icon_name} transition={transition} display={display} currentPage={currentPage} setCurrentPage={setCurrentPage}/>
         })}
-        {(display && window.innerWidth > 775) && <CloseButton footer={footer} transition={transition} display={display} currentPage={currentPage} setCurrentPage={setCurrentPage} colors="add_light_gray" title="Close Button" icon_name="close"/>}
+        {(display && window.innerWidth > 775) && <CloseButton transition={transition} display={display} currentPage={currentPage} setCurrentPage={setCurrentPage} colors="add_light_gray" title="Close Button" icon_name="close"/>}
       </ul>
     </div>
   );

@@ -1,10 +1,9 @@
 import React from 'react'
 import dataLayer from '../../dataLayer'
-
-
-function Buttons({footer: {footer_button_style, footer_icon_style, footer_li_style}, title, colors, icon_name, transition, display, currentPage}) {
+import { footer } from '../../utils/css'
+function Buttons({title, colors, icon_name, transition, display, currentPage}) {
   return (
-    <li style={footer_li_style} 
+    <li style={footer.footer_li_style} 
     onMouseOver={({target})=> {
       dataLayer("interaction", {category: currentPage, action: "iconInteraction", label: "hover", misc: title})
       target.parentNode.parentNode.classList.add(colors)}
@@ -17,13 +16,13 @@ function Buttons({footer: {footer_button_style, footer_icon_style, footer_li_sty
     }
     <a
       onClick={() => transition(title)}
-      style={footer_button_style}
+      style={footer.footer_button_style}
       title={title}
       className={`${display === title && colors}`}
     >
       <i
         className="material-icons medium"
-        style={footer_icon_style}
+        style={footer.footer_icon_style}
       >
         {icon_name}
       </i>

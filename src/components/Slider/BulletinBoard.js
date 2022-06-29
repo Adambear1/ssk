@@ -3,7 +3,7 @@ import logo from "../../assets/logo.png";
 import dataLayer from "../../dataLayer";
 import { bulletinBoard } from "../../utils/css";
 import SlideShow from "./SlideShow";
-import Static from "./Static";
+// import Static from "./Static";
 function BulletinBoard() {
   const [logoStyle, setLogoStyle] = useState({
     ...bulletinBoard.logo_main,
