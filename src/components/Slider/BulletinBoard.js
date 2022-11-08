@@ -1,17 +1,14 @@
-import React, { useState } from "react";
+import React from "react";
 import logo from "../../assets/logo.png";
 import dataLayer from "../../dataLayer";
-import { bulletinBoard } from "../../utils/css";
 import SlideShow from "./SlideShow";
-// import Static from "./Static";
-function BulletinBoard() {
-  const [logoStyle, setLogoStyle] = useState({
-    ...bulletinBoard.logo_main,
-    ...bulletinBoard.logo_regular,
+import Static from "./Static";
+export default function BulletinBoard() {
+  const [logoStyle, setLogoStyle] = React.useState({
+    ...logo_main,
+    ...logo_regular,
   });
-
-
-// const isSmall = window.innerWidth < 769;
+const isSmall = window.innerWidth < 769;
 
   return (
     <div
@@ -19,40 +16,68 @@ function BulletinBoard() {
       style={{ width: "100%", height: "80vh" }}
     >
       {
-        // isSmall ? <Static children={
+        // isSmall ? 
+        // <Static children={
         //   <img
         //     className="logo"
         //     onMouseDown={() => {
         //       dataLayer("interaction", {category: "home", action: "iconInteraction", label: "click"})
-        //       setLogoStyle({ ...bulletinBoard.logo_main, ...bulletinBoard.logo_small })
+        //       setLogoStyle({ ...logo_main, ...logo_small })
         //     }
         //   }
-        //     onMouseUp={() => setLogoStyle({ ...bulletinBoard.logo_main, ...bulletinBoard.logo_regular })}
+        //     onMouseUp={() => setLogoStyle({ ...logo_main, ...logo_regular })}
         //     src={logo}
         //     style={logoStyle}
         //     alt="Company Logo"
         //     title="Seven Son's Kitchen!"
         //   />
-        // }/> :
-      <SlideShow
-        children={
-          <img
+        // }/> 
+        // :
+      <SlideShow children={
+        <img
             className="logo"
             onMouseDown={() => {
               dataLayer("interaction", {category: "home", action: "iconInteraction", label: "click"})
-              setLogoStyle({ ...bulletinBoard.logo_main, ...bulletinBoard.logo_small })
+                setLogoStyle({ ...logo_main, ...logo_small })
+              }
             }
-          }
-            onMouseUp={() => setLogoStyle({ ...bulletinBoard.logo_main, ...bulletinBoard.logo_regular })}
+            onMouseUp={() => setLogoStyle({ ...logo_main, ...logo_regular })}
             src={logo}
             style={logoStyle}
             alt="Company Logo"
             title="Seven Son's Kitchen!"
-          />
-        }
-      />}
+      />
+      }/>
+        
+}
     </div>
   );
 }
 
-export default BulletinBoard;
+const {logo_main, logo_regular, logo_small} = {
+  logo_main: {
+    zIndex: 10,
+    position: "absolute",
+    display: "flex",
+    justifyContent: "center",
+    cursor: "pointer",
+    width: "auto",
+    height: "auto",
+    textAlign: "center",
+    transition: ".3s ease",
+    backgroundPosition: "center center",
+    backgroundSize: "cover",
+    backgroundAttachment: "fixed",
+    backgroundRepeat: "no-repeat",
+  },
+  logo_regular: {
+    width: "80%",
+    height: "100%",
+    marginLeft: "10%",
+  },
+  logo_small: {
+    width: "77%",
+    height: "97%",
+    marginLeft: "11.5%",
+  },
+};

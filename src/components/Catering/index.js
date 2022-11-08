@@ -1,7 +1,7 @@
 import React from 'react'
 import Information from './Information';
 
-function Catering({currentPage, setCurrentPage}) {
+export default function Catering({currentPage, setCurrentPage}) {
   React.useEffect(()=> {
     setCurrentPage("contact");
   },[])
@@ -12,6 +12,3 @@ function Catering({currentPage, setCurrentPage}) {
     </div>
   );
 }
-
-
-export default Catering

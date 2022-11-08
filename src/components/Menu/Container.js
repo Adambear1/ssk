@@ -15,15 +15,14 @@ import links5 from "../../assets/links5.jpg";
 import ribs1 from "../../assets/ribs1.png";
 import ribs2 from "../../assets/ribs2.jpg";
 import ribs3 from "../../assets/ribs3.jpg";
-import burnttips1 from "../../assets/burnttips1.jpg"
-import burnttips2 from "../../assets/burnttips2.jpg"
-import burnttips3 from "../../assets/burnttips3.jpg"
+import burnttips1 from "../../assets/burnttips1.jpg";
+import burnttips2 from "../../assets/burnttips2.jpg";
+import burnttips3 from "../../assets/burnttips3.jpg";
 import gumbo1 from "../../assets/gumbo1.jpg";
-import slider1 from "../../assets/slider1.jpg"
-import { menu } from "../../utils/css";
+import slider1 from "../../assets/slider1.jpg";
 import Item from "./Item";
 import Pagination from "./Pagination";
-function Container() {
+export default function Container() {
   const [show, setShow] = React.useState(false);
   const items = [
     {
@@ -101,20 +100,20 @@ function Container() {
           setShow={setShow}
         />
       )}
-      <div className="row" style={menu.row_style}>
+      <div className="row" style={row_style}>
         {currentPosts.map(({ src, name, desc, cat, all_photos, type, gf }, index) => (
           <div
             key={index}
             className="col s3"
-            style={menu.container_style}
+            style={container_style}
             onClick={() => {
               dataLayer("interaction", {category: "menu", action: "foodCard", label: "view", misc: name})
               return setShow({ src, name, desc, cat, all_photos, type, gf })
             }
             }
           >
-            <div className="waves-effect waves-light" style={menu.cover_style}>
-              <img src={src} style={menu.img_style} alt={name}/>
+            <div className="waves-effect waves-light" style={cover_style}>
+              <img src={src} style={img_style} alt={name}/>
             </div>
           </div>
         ))}
@@ -128,4 +127,29 @@ function Container() {
   );
 }
 
-export default Container;
+const {img_style, cover_style, row_style, container_style} = {
+  row_style: {
+    marginBottom: "90px",
+  },
+  container_style: {
+    marginTop: "20px",
+  },
+  img_style: {
+    maxHeight: "50%",
+    maxWidth: "100%",
+    margin: "0",
+    padding: "0",
+    width: "100%",
+    height: "200px",
+    borderRadius: "5px",
+    objectFit: "cover",
+    objectPosition: "100% 100%",
+    cursor: "pointer",
+  },
+  cover_style: {
+    zIndex: 1000,
+    backgroundColor: "rgba (255,255,255,.1)",
+    maxWidth: "100%",
+    height: "100%"
+  }
+}

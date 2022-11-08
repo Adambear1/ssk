@@ -1,5 +1,4 @@
 import React from "react";
-import { menu } from "../../utils/css";
 
 const Pagination = ({ postsPerPage, totalPosts, paginate }) => {
   const pageNumbers = [];
@@ -7,14 +6,14 @@ const Pagination = ({ postsPerPage, totalPosts, paginate }) => {
     pageNumbers.push(i);
   }
   return (
-    <nav className="yellow" style={menu.pagination_nav}>
-      <ul className="pagination " style={menu.pagination_ul}>
+    <nav className="yellow" style={pagination_nav}>
+      <ul className="pagination " style={pagination_ul}>
         {pageNumbers.map((number, index) => (
           <li key={index} className="page-item">
             <a
               onClick={() => paginate(number)}
               className="page-link waves-effect waves-light"
-              style={menu.pagination_btn}
+              style={pagination_btn}
             >
               {number}
             </a>
@@ -24,5 +23,30 @@ const Pagination = ({ postsPerPage, totalPosts, paginate }) => {
     </nav>
   );
 };
+
+const {pagination_nav, pagination_ul, pagination_btn} = {
+  pagination_nav: {
+    position: "absolute",
+    bottom: "0",
+    left: "0",
+    right: "0",
+    width: "100%",
+  },
+  pagination_ul: {
+    display: "flex",
+    flexDirection: "row",
+    flexBasis: "auto",
+    justifyContent: "center",
+    alignContent: "space-between",
+    flexWrap: "wrap",
+  },
+  pagination_btn: {
+    borderRadius: "40%",
+    border: "2px solid black",
+    backgroundColor: "white",
+    marginLeft: "15px",
+    transition: "1s ease",
+  }
+}
 
 export default Pagination;

@@ -1,7 +1,6 @@
 import React from "react";
-import { contact } from "../../utils/css";
 
-function CateringMenu() {
+export default function CateringMenu() {
   return (
     <div >
       <u>
@@ -10,17 +9,17 @@ function CateringMenu() {
       <div className="container">
         <div className="">
           <h6>10-50 People:</h6>
-          <ul style={contact.catering_menu_style}>
+          <ul style={catering_menu_style}>
             <li>2 Meats w/ 2 Sides = $19.50 per person.</li>
             <li>3 Meats w/ 3 Sides = $20.50 per person.</li>
           </ul>
           <h6>51-100 People:</h6>
-          <ul style={contact.catering_menu_style}>
+          <ul style={catering_menu_style}>
             <li>2 Meats w/ 2 Sides = $20.50 per person.</li>
             <li>3 Meats w/ 3 Sides = $21.50 per person.</li>
           </ul>
           <h6>101+ People:</h6>
-          <ul style={contact.catering_menu_style}>
+          <ul style={catering_menu_style}>
             <li>2 Meats w/ 2 Sides = $21.50 per person.</li>
             <li>3 Meats w/ 3 Sides = $22.50 per person.</li>
           </ul>
@@ -29,7 +28,7 @@ function CateringMenu() {
         <div className="row">
           <div className="col s12">
             <h6>Meats:</h6>
-            <ol style={contact.catering_menu_style}>
+            <ol style={catering_menu_style}>
               <li>Spare Ribs With Tips</li>
               <li>BBQ Chicken - Legs, Wings + Thighs</li>
               <li>Smoked 1/4 Chicken</li>
@@ -40,19 +39,19 @@ function CateringMenu() {
             </ol>
           </div>
         </div>
-        <div className="row" style={contact.catering_menu_style}>
+        <div className="row" style={catering_menu_style}>
           <div className="col s4">
             <h6>Soups + Salads:</h6>
-            <ol style={contact.catering_menu_style}>
+            <ol style={catering_menu_style}>
               <li>Seafood Gumbo</li>
               <li>Potato Salad</li>
               <li>Garden Salad</li>
               <li>Pineapple Coleslaw</li>
             </ol>
           </div>
-          <div className="col s4" style={contact.catering_menu_style}>
+          <div className="col s4" style={catering_menu_style}>
             <h6>Sides:</h6>
-            <ol style={contact.catering_menu_style}>
+            <ol style={catering_menu_style}>
               <li>Mac n Cheese</li>
               <li>Collard Greens</li>
               <li>BBQ Beans</li>
@@ -60,9 +59,9 @@ function CateringMenu() {
               <li>Cornbread Muffins</li>
             </ol>
           </div>
-          <div className="col s4" style={contact.catering_menu_style}>
+          <div className="col s4" style={catering_menu_style}>
             <h6>Deserts:</h6>
-            <ol style={contact.catering_menu_style}>
+            <ol style={catering_menu_style}>
               <li>Pound Cake</li>
               <li>Banana Nut Pound Cake</li>
               <li>Banana Pudding</li>
@@ -77,4 +76,9 @@ function CateringMenu() {
   );
 }
 
-export default CateringMenu;
+const {catering_menu_style} = {
+  catering_menu_style: {
+    margin: "0px",
+    padding: "0px"
+  },
+};

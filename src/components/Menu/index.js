@@ -1,7 +1,7 @@
-import React from 'react'
-import dataLayer from '../../dataLayer'
-import Card from '../Card'
-import Container from './Container'
+import React from 'react';
+import dataLayer from '../../dataLayer';
+import Card from '../Card';
+import Container from './Container';
 
 function Menu({currentPage, setCurrentPage}) {
     React.useEffect(()=> {

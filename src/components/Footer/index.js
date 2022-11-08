@@ -1,13 +1,10 @@
-import React, { useState } from "react";
-import "../../styles.css";
-import { footer } from "../../utils/css";
-import { footer_timer_top, footer_timer_bottom } from "../../utils/timers";
+import React from "react";
 import Buttons from "./Buttons";
-import CloseButton from "./CloseButton"
+import CloseButton from "./CloseButton";
 
-function Footer({ display, setDisplay, styles, currentPage, setCurrentPage}) {
-  const [transitionUp, setTransitionUp] = useState(false);
-  const [transitionDown, setTransitionDown] = useState(false);
+export default function Footer({ display, setDisplay, styles, currentPage, setCurrentPage}) {
+  const [transitionUp, setTransitionUp] = React.useState(false);
+  const [transitionDown, setTransitionDown] = React.useState(false);
   const transitionClose = () => {
     setTimeout(() => {
       setDisplay(null);
@@ -15,6 +12,9 @@ function Footer({ display, setDisplay, styles, currentPage, setCurrentPage}) {
       setTimeout(() => setTransitionDown(false), footer_timer_top);
     });
   };
+
+  const footer_timer_bottom = 1250;
+  const footer_timer_top = 1550;
   const transition = (item) => {
     if (display && item === display) {
       return transitionClose();
@@ -61,14 +61,25 @@ function Footer({ display, setDisplay, styles, currentPage, setCurrentPage}) {
     title: "Contact",
     colors: "add_red",
     icon_name: "local_phone"
-  }]
+  }];
+  const footer = {
+    footer_ul_style: {
+      width: "100%",
+      height: "14.5%",
+      lineHeight: "56px",
+      position: "absolute",
+      padding: "25px",
+      margin: 0,
+      justifyContent: "center",
+    }
+  };
   return (
     <div>
       <ul
         className={`center orange accent-3 footer-nav animate__animated animate__fadeIn ${
           !display ? "transition-footer-bottom" : "transition-footer-top"
         }`}
-        style={footer.footer_ul_style}
+        style={footer_ul_style}
       >
         {list_items.map(({title, colors, icon_name}, index)=>{
                   return <Buttons key={index} title={title} colors={colors} icon_name={icon_name} transition={transition} display={display} currentPage={currentPage} setCurrentPage={setCurrentPage}/>
@@ -79,4 +90,14 @@ function Footer({ display, setDisplay, styles, currentPage, setCurrentPage}) {
   );
 }
 
-export default Footer;
+const {footer_ul_style, } = {
+    footer_ul_style: {
+      width: "100%",
+      height: "14.5%",
+      lineHeight: "56px",
+      position: "absolute",
+      padding: "25px",
+      margin: 0,
+      justifyContent: "center",
+    }
+};

@@ -1,5 +1,4 @@
 import React from "react";
-import { contact } from "../../utils/css";
 import Card from "../Card";
 import LinksTag from "../LinksTag";
 import CateringMenu from "../Catering/CateringMenu";
@@ -13,7 +12,7 @@ function Information({ social_media }) {
       <Card name="Contact" color="red" accent={true}>
         <div className="card-stacked">
           <div className="card-content container">
-            <p>We <b>CATER</b>: Any size, time, event... we provide our top quality food and deliver to the location! Please checkout our <span style={contact.cater_style} onClick={()=>setShow(true)}>CATERING MENU</span> for details.</p>
+            <p>We <b>CATER</b>: Any size, time, event... we provide our top quality food and deliver to the location! Please checkout our <span style={cater_style} onClick={()=>setShow(true)}>CATERING MENU</span> for details.</p>
             <br/>
             <p>
               Follow our social media to stay to date with latest events, menu
@@ -57,7 +56,7 @@ function Information({ social_media }) {
           </div>
           <div
             className="card-action align social-media-container"
-            style={contact.icon_style}
+            style={icon_style}
           >
             {social_media.map(({ button, name }, index) => (
               <td dangerouslySetInnerHTML={{ __html: button }} key={index} onClick={()=> dataLayer("interaction", {category: "contact", action: "linkClicked", label: name})} />
@@ -67,6 +66,17 @@ function Information({ social_media }) {
       </Card>
     </div>
   );
+}
+
+const {icon_style, cater_style} =
+{icon_style: {
+  display: "flex",
+  justifyContent: "center",
+},
+  cater_style: {
+    color: "blue",
+    cursor: "pointer"
+  }
 }
 
 export default Information;

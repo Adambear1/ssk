@@ -1,5 +1,4 @@
 import React from "react";
-import { contact } from "../../utils/css";
 import Card from "../Card";
 import LinksTag from "../LinksTag";
 import CateringMenu from "./CateringMenu";
@@ -12,7 +11,7 @@ function Information({ social_media }) {
       <Card name="Catering" color="brown" accent={true}>
         <div className="card-stacked">
           <div className="card-content container">
-            <p>We <b>CATER</b>: Any size, time, event... we provide our top quality food and deliver to the location! Please checkout our <span style={contact.cater_style} onClick={()=>setShow(true)}>CATERING MENU</span> for details.</p>
+            <p>We <b>CATER</b>: Any size, time, event... we provide our top quality food and deliver to the location! Please checkout our <span style={cater_style} onClick={()=>setShow(true)}>CATERING MENU</span> for details.</p>
             <br/>
             <p>We have catered hundreds events ranging from weddings, birthday parties, and graduations to sporting events, retirement parties and everything in between.</p>
             <p>
@@ -32,6 +31,13 @@ function Information({ social_media }) {
       </Card>
     </div>
   );
+}
+
+const {cater_style} = {
+  cater_style: {
+    color: "blue",
+    cursor: "pointer"
+  }
 }
 
 export default Information;

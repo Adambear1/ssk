@@ -2,7 +2,7 @@ import React from 'react'
 import Card from "../Card"
 // import image from "../../assets/map.png"
 import LinksTag from '../LinksTag'
-function Information() {
+export default function Information() {
     // const image_style={
     //     height: "450px",
     //     width: "450px",
@@ -23,6 +23,4 @@ function Information() {
             </Card>
         </div>
     )
-}
-
-export default Information
+};

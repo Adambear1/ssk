@@ -1,7 +1,7 @@
 import React from 'react'
 import Information from './Information'
 
-function Location({currentPage, setCurrentPage}) {
+export default function Location({currentPage, setCurrentPage}) {
     React.useEffect(()=> {
         setCurrentPage("menu");
       },[])
@@ -11,5 +11,3 @@ function Location({currentPage, setCurrentPage}) {
         </div>
     )
 }
-
-export default Location

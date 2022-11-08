@@ -7,12 +7,12 @@ const data = {
   env: window.location.href.includes("http://localhost") ? "dev" : "prod"
 }
 
-const reducer = (
+export default function reducer(
   state = data, {
     type,
     payload
   }
-) => {
+){
   switch (type) {
     case "SETTINGS_CHANGE":
       return state
@@ -21,5 +21,3 @@ const reducer = (
       return state;
   }
 };
-
-export default reducer;

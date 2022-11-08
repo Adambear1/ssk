@@ -1,9 +1,9 @@
-import React from 'react'
-import dataLayer from '../../dataLayer'
-import { footer } from '../../utils/css'
-function Buttons({title, colors, icon_name, transition, display, currentPage}) {
+import React from 'react';
+import dataLayer from '../../dataLayer';
+
+export default function Buttons({title, colors, icon_name, transition, display, currentPage}) {
   return (
-    <li style={footer.footer_li_style} 
+    <li style={footer_li_style} 
     onMouseOver={({target})=> {
       dataLayer("interaction", {category: currentPage, action: "iconInteraction", label: "hover", misc: title})
       target.parentNode.parentNode.classList.add(colors)}
@@ -16,13 +16,13 @@ function Buttons({title, colors, icon_name, transition, display, currentPage}) {
     }
     <a
       onClick={() => transition(title)}
-      style={footer.footer_button_style}
+      style={footer_button_style}
       title={title}
-      className={`${display === title && colors}`}
+      className={`${display === title ? colors : "none"}`}
     >
       <i
         className="material-icons medium"
-        style={footer.footer_icon_style}
+        style={footer_icon_style}
       >
         {icon_name}
       </i>
@@ -31,4 +31,17 @@ function Buttons({title, colors, icon_name, transition, display, currentPage}) {
   )
 }
 
-export default Buttons
+const {footer_button_style, footer_li_style, footer_icon_style} = {
+  footer_button_style: {
+    cursor: "pointer",
+    marginTop: "30%",
+    transition: "2s ease",
+  },
+  footer_li_style: {
+    display: "inline",
+    margin: 50,
+  },
+  footer_icon_style: {
+    transition: "3s ease",
+  },
+};
