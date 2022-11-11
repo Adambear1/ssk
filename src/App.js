@@ -13,12 +13,8 @@ export default function App() {
   const [loading, setLoading] = React.useState(false);
   const store = createStore(reducer);
   React.useEffect(() => setTimeout(() => setLoading(false), 1800 /*timer*/), []);
-  const timer = window.location.href.includes("http://localhost:3000/") ? 0 : load_timer;
-
 
   return (
-    
-
     <Provider store={store}>
        <React.Suspense fallback={<Loader />}> 
           <Home/>
