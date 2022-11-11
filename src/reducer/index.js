@@ -1,9 +1,15 @@
+// const navigator = navigator || window.navigator || ""
+const WIDTH = window.screen.width;
+const HEIGHT = window.screen.height;
+
 const data = {
-  height: window.screen.height,
-  width: window.screen.width,
-  battery: navigator.getBattery().then(({
-    level
-  }) => level),
+  height: HEIGHT,
+  width: WIDTH,
+  // battery: navigator && navigator.getBattery().then(({
+  //   level
+  // }) => level),
+  isSmall: WIDTH < 845,
+  isMed: WIDTH < 1180,
   env: window.location.href.includes("http://localhost") ? "dev" : "prod"
 }
 
@@ -15,7 +21,7 @@ export default function reducer(
 ){
   switch (type) {
     case "SETTINGS_CHANGE":
-      return state
+      return {...state, ...payload}
 
     default:
       return state;

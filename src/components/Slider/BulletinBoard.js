@@ -3,12 +3,11 @@ import logo from "../../assets/logo.png";
 import dataLayer from "../../dataLayer";
 import SlideShow from "./SlideShow";
 import Static from "./Static";
-export default function BulletinBoard() {
+export default function BulletinBoard({store}) {
   const [logoStyle, setLogoStyle] = React.useState({
     ...logo_main,
     ...logo_regular,
   });
-const isSmall = window.innerWidth < 769;
 
   return (
     <div
@@ -35,7 +34,7 @@ const isSmall = window.innerWidth < 769;
         // :
       <SlideShow children={
         <img
-            className="logo"
+            className="logo brand-logo"
             onMouseDown={() => {
               dataLayer("interaction", {category: "home", action: "iconInteraction", label: "click"})
                 setLogoStyle({ ...logo_main, ...logo_small })
@@ -73,6 +72,7 @@ const {logo_main, logo_regular, logo_small} = {
   logo_regular: {
     width: "80%",
     height: "100%",
+    verticalAlign: "center",
     marginLeft: "10%",
   },
   logo_small: {

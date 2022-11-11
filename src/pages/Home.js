@@ -17,10 +17,7 @@ export default function Home() {
   const [payload, setPayload] = React.useState(store || {});
   React.useEffect(()=> {
     setCurrentPage("home");
-    navigator.getBattery().then(({level})=> {
-      setPayload({...payload, battery : level})
-    });
-      dispatch({type: "SETTINGS_CHANGE", payload});
+    dispatch({type: "SETTINGS_CHANGE", payload});
   },[]);
   React.useEffect(()=>{
     document.title = `Seven Son's Kitchen - ${currentPage.replace(
@@ -35,9 +32,9 @@ export default function Home() {
   });
   return (
     <div className="main">
-      <Header />
-      <BulletinBoard />
-      <Footer setDisplay={setDisplay} display={display} currentPage={currentPage} setCurrentPage={setCurrentPage}/>
+      <Header store={store}/>
+      <BulletinBoard store={store} />
+      <Footer store={store} setDisplay={setDisplay} display={display} currentPage={currentPage} setCurrentPage={setCurrentPage}/>
       <Slider
         display={display}
       >

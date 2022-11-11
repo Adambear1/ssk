@@ -12,7 +12,7 @@ export default function SlideShow({ children }) {
   const [image, setImage] = React.useState(images[0])
   React.useEffect(()=> {
     const update = setTimeout(()=>{
-      var random = Math.floor(Math.random()*images.length)
+      var random = Math.floor(Math.random()*images.length - 1)
       var selection = images[random];
       if(selection){
         setImage(selection);

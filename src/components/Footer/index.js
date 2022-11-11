@@ -76,15 +76,15 @@ export default function Footer({ display, setDisplay, styles, currentPage, setCu
   return (
     <div>
       <ul
-        className={`center orange accent-3 footer-nav animate__animated animate__fadeIn ${
+        className={`row center orange accent-3 footer-nav animate__animated animate__fadeIn row ${
           !display ? "transition-footer-bottom" : "transition-footer-top"
         }`}
         style={footer_ul_style}
       >
         {list_items.map(({title, colors, icon_name}, index)=>{
-                  return <Buttons key={index} title={title} colors={colors} icon_name={icon_name} transition={transition} display={display} currentPage={currentPage} setCurrentPage={setCurrentPage}/>
+                  return <Buttons  key={index} title={title} colors={colors} icon_name={icon_name} transition={transition} display={display} currentPage={currentPage} setCurrentPage={setCurrentPage}/>
         })}
-        {(display && window.innerWidth > 775) && <CloseButton transition={transition} display={display} currentPage={currentPage} setCurrentPage={setCurrentPage} colors="add_light_gray" title="Close Button" icon_name="close"/>}
+        {/* {(display && window.innerWidth > 775) && <CloseButton transition={transition} display={display} currentPage={currentPage} setCurrentPage={setCurrentPage} colors="add_light_gray" title="Close Button" icon_name="close"/>} */}
       </ul>
     </div>
   );

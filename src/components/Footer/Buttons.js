@@ -10,6 +10,7 @@ export default function Buttons({title, colors, icon_name, transition, display, 
     }
     onClick={()=> dataLayer("interaction", {category: currentPage, action: "iconInteraction", label: "click", misc: title})}
     onMouseOut={({target})=> Array.from(target.parentNode.parentNode.classList).length > 0 && target.parentNode.parentNode.classList.remove(colors)}
+    className=""
     >
     {
       // eslint-disable-next-line
@@ -18,7 +19,7 @@ export default function Buttons({title, colors, icon_name, transition, display, 
       onClick={() => transition(title)}
       style={footer_button_style}
       title={title}
-      className={`${display === title ? colors : "none"}`}
+      className={`col s3 ${display === title ? colors : "none"}`}
     >
       <i
         className="material-icons medium"
@@ -34,12 +35,12 @@ export default function Buttons({title, colors, icon_name, transition, display, 
 const {footer_button_style, footer_li_style, footer_icon_style} = {
   footer_button_style: {
     cursor: "pointer",
-    marginTop: "30%",
+    // marginTop: "30%",
     transition: "2s ease",
   },
   footer_li_style: {
     display: "inline",
-    margin: 50,
+    // margin: 50,
   },
   footer_icon_style: {
     transition: "3s ease",
